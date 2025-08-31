@@ -35,6 +35,9 @@ private:
   ParamControl *SmartCruiseControlVision;
   ParamControl *SmartCruiseControlMap;
   ParamControl *intelligentCruiseButtonManagement = nullptr;
+
+  ParamControlSP *AccelPersonalityControl;
+  ParamControlSP *DynamicPersonalityControl;
   SpeedLimitSettings *speedLimitScreen;
   PushButtonSP *speedLimitSettings;
 };

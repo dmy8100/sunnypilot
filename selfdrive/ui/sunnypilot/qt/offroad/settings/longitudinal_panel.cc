@@ -62,6 +62,22 @@ LongitudinalPanel::LongitudinalPanel(QWidget *parent) : QWidget(parent) {
 
   QObject::connect(uiState(), &UIState::offroadTransition, this, &LongitudinalPanel::refresh);
 
+  // Acceleration Personality
+  AccelPersonalityControl = new ParamControlSP("AccelPersonalityEnabled",
+    tr("Acceleration Personality"),
+    tr("Controls acceleration behavior: Eco (efficient), Normal (balanced), Sport (responsive). "
+      "Adjust how aggressively the vehicle accelerates while maintaining smooth operation."),
+    "../assets/offroad/icon_shell.png");
+  list->addItem(AccelPersonalityControl);
+
+  // Dynamic Personality
+  DynamicPersonalityControl = new ParamControlSP("DynamicFollow",
+    tr("Following Distance Personality"),
+    tr("Controls following distance and braking behavior: Relaxed (longer distance, gentler braking), Standard (balanced), Aggressive (shorter distance, firmer braking). "
+      "Fine-tune your comfort level in traffic situations."),
+    "../assets/offroad/icon_shell.png");
+  list->addItem(DynamicPersonalityControl);
+
   speedLimitSettings = new PushButtonSP(tr("Speed Limit"), 750, this);
   connect(speedLimitSettings, &QPushButton::clicked, [&]() {
     cruisePanelScroller->setLastScrollPosition();
@@ -135,7 +151,6 @@ void LongitudinalPanel::refresh(bool _offroad) {
       intelligentCruiseButtonManagement->toggleFlipped(false);
     }
   }
-
   bool icbm_allowed = intelligent_cruise_button_management_available && !has_longitudinal_control;
   intelligentCruiseButtonManagement->setEnabled(icbm_allowed && offroad);
 
@@ -145,6 +160,11 @@ void LongitudinalPanel::refresh(bool _offroad) {
   customAccIncrement->refresh();
 
   SmartCruiseControlVision->setEnabled(has_longitudinal_control || icbm_allowed);
+  AccelPersonalityControl->setEnabled(true);
+  DynamicPersonalityControl->setEnabled(true);
+  AccelPersonalityControl->refresh();
+  DynamicPersonalityControl->refresh();
+
   SmartCruiseControlMap->setEnabled(has_longitudinal_control || icbm_allowed);
 
   offroad = _offroad;
