@@ -554,7 +554,7 @@ EVENTS: dict[int, dict[str, Alert | AlertCallbackType]] = {
   },
 
   EventName.resumeBlocked: {
-    ET.NO_ENTRY: NoEntryAlert("Press Set to Engage"),
+    #ET.NO_ENTRY: NoEntryAlert("Press Set to Engage"),
   },
 
   EventName.wrongCruiseMode: {
@@ -671,8 +671,8 @@ EVENTS: dict[int, dict[str, Alert | AlertCallbackType]] = {
   },
 
   EventName.selfdrivedLagging: {
-    ET.SOFT_DISABLE: soft_disable_alert("系统延迟"),
-    ET.NO_ENTRY: NoEntryAlert("Selfdrive进程延迟：请重启设备"),
+   # ET.SOFT_DISABLE: soft_disable_alert("系统延迟"),
+    #ET.NO_ENTRY: NoEntryAlert("Selfdrive进程延迟：请重启设备"),
   },
 
   # Thrown when manager detects a service exited unexpectedly while driving
