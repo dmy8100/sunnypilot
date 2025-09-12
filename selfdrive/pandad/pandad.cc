@@ -89,7 +89,6 @@ Panda *connect(std::string serial="", uint32_t index=0) {
                                        panda->hw_type) != DEPRECATED_PANDA_TYPES.end();
 
   if (is_deprecated_panda) {
-    LOGW("panda %s is deprecated (hw_type: %i), skipping firmware check...", panda->hw_serial().c_str(), static_cast<uint16_t>(panda->hw_type));
     return panda.release();
   }
 
@@ -526,7 +525,6 @@ void pandad_main_thread(std::vector<std::string> serials) {
     serials_str += serials[i];
     if (i < serials.size() - 1) serials_str += ", ";
   }
-  LOGW("connecting to pandas: %s", serials_str.c_str());
 
   // connect to all provided serials
   std::vector<Panda *> pandas;
@@ -542,7 +540,6 @@ void pandad_main_thread(std::vector<std::string> serials) {
   }
 
   if (!do_exit) {
-    LOGW("connected to all pandas");
     pandad_run(pandas);
   }
 
