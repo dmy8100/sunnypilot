@@ -143,97 +143,135 @@ void ModelRendererSP::drawLeadStatusAtPosition(QPainter &painter,
   int chevron_data = std::atoi(Params().get("ChevronInfo").c_str());
   float sz = std::clamp((25 * 30) / (d_rel / 3 + 30), 15.0f, 30.0f) * 2.35;
 
-  QFont content_font = painter.font();
-  content_font.setPixelSize(42);
-  content_font.setBold(true);
-  painter.setFont(content_font);
+    QFont content_font = painter.font();
+    content_font.setPixelSize(65); // 增大字体到65
+    content_font.setBold(true);
+    painter.setFont(content_font);
 
-  bool is_metric = s->scene.is_metric;
-  QStringList text_lines;
+    bool is_metric = s->scene.is_metric;
 
-  const int chevron_all = 4;
-  QStringList chevron_text[3];
+    // 分离速度信息和其他信息
+    QStringList top_text_lines;    // 显示在chevron上方的文本（速度）
+    QStringList bottom_text_lines; // 显示在chevron下方的文本（距离和TTC）
 
-  // Distance display
-  if (chevron_data == 1 || chevron_data == chevron_all) {
-    int pos = 0;
-    float val = std::max(0.0f, d_rel);
-    QString unit = is_metric ? "m" : "ft";
-    if (!is_metric) val *= 3.28084f;
-    chevron_text[pos].append(QString::number(val, 'f', 0) + " " + unit);
-  }
+    const int chevron_all = 4;
 
-  // Speed display
-  if (chevron_data == 2 || chevron_data == chevron_all) {
-    int pos = (chevron_data == 2) ? 0 : 1;
-    float multiplier = is_metric ? static_cast<float>(MS_TO_KPH) : static_cast<float>(MS_TO_MPH);
-    float val = std::max(0.0f, (v_rel + v_ego) * multiplier);
-    QString unit = is_metric ? "km/h" : "mph";
-    chevron_text[pos].append(QString::number(val, 'f', 0) + " " + unit);
-  }
-
-  // Time to contact
-  if (chevron_data == 3 || chevron_data == chevron_all) {
-    int pos = (chevron_data == 3) ? 0 : 2;
-    float val = (d_rel > 0 && v_ego > 0) ? std::max(0.0f, d_rel / v_ego) : 0.0f;
-    QString ttc = (val > 0 && val < 200) ? QString::number(val, 'f', 1) + "s" : "---";
-    chevron_text[pos].append(ttc);
-  }
-
-  for (int i = 0; i < 3; ++i) {
-    if (!chevron_text[i].isEmpty()) {
-      text_lines.append(chevron_text[i]);
+    // 速度显示 - 放在上方，不显示单位
+    if (chevron_data == 2 || chevron_data == chevron_all) {
+        float multiplier = is_metric ? static_cast<float>(MS_TO_KPH) : static_cast<float>(MS_TO_MPH);
+        float val = std::max(0.0f, (v_rel + v_ego) * multiplier);
+        // 移除单位，只显示数值
+        top_text_lines.append(QString::number(val, 'f', 0));
     }
-  }
 
-  if (text_lines.isEmpty()) return;
+    // 距离显示 - 放在下方
+    if (chevron_data == 1 || chevron_data == chevron_all) {
+        float val = std::max(0.0f, d_rel);
+        QString unit = is_metric ? "m" : "ft";
+        if (!is_metric) val *= 3.28084f;
+        bottom_text_lines.append(QString::number(val, 'f', 0) + " " + unit);
+    }
 
-  QFontMetrics fm(content_font);
-  float text_width = 120.0f;
-  for (const QString &line : text_lines) {
-    text_width = std::max(text_width, fm.horizontalAdvance(line) + 20.0f);
-  }
-  text_width = std::min(text_width, 250.0f);
+    // 时间到接触显示 - 放在下方
+    const bool SHOW_TTC = false; // 设置为false不显示碰撞时间，true则显示
+    if (SHOW_TTC && (chevron_data == 3 || chevron_data == chevron_all)) {
+        float val = (d_rel > 0 && v_ego > 0) ? std::max(0.0f, d_rel / v_ego) : 0.0f;
+        QString ttc = (val > 0 && val < 200) ? QString::number(val, 'f', 1) + "s" : "---";
+        bottom_text_lines.append(ttc);
+    }
 
-  float line_height = 45.0f;
-  float total_height = text_lines.size() * line_height;
-  float margin = 20.0f;
+    // 如果没有内容需要显示，直接返回
+    if (top_text_lines.isEmpty() && bottom_text_lines.isEmpty()) return;
 
-  float text_y = chevron_pos.y() + sz + 15;
-  if (text_y + total_height > height - margin) {
-    text_y = chevron_pos.y() - sz - 15 - total_height;
-    text_y = std::max(margin, text_y);
-  }
+    QFontMetrics fm(content_font);
+    float margin = 20.0f;
+    float line_height = 65.0f; // 增大行高以适应更大的字体
 
-  float text_x = chevron_pos.x() - text_width / 2;
-  text_x = std::clamp(text_x, margin, (float)width - text_width - margin);
+    // 计算上方文本区域
+    float top_text_width = 120.0f;
+    for (const QString &line : top_text_lines) {
+        top_text_width = std::max(top_text_width, fm.horizontalAdvance(line) + 20.0f);
+    }
+    top_text_width = std::min(top_text_width, 250.0f);
+
+
+    // 计算下方文本区域
+    float bottom_text_width = 120.0f;
+    for (const QString &line : bottom_text_lines) {
+        bottom_text_width = std::max(bottom_text_width, fm.horizontalAdvance(line) + 20.0f);
+    }
+    bottom_text_width = std::min(bottom_text_width, 250.0f);
+    float bottom_total_height = bottom_text_lines.size() * line_height;
+
+    // 计算上方文本位置 - 进一步降低位置（增加与chevron的距离）
+    float top_text_y = chevron_pos.y() - sz - 35; // 从5改为30，进一步降低位置
+    top_text_y = std::max(margin, top_text_y);
+    float top_text_x = chevron_pos.x() - top_text_width / 2;
+    top_text_x = std::clamp(top_text_x, margin, (float)width - top_text_width - margin);
+
+    // 计算下方文本位置
+    float bottom_text_y = chevron_pos.y() + sz + 15;
+    if (bottom_text_y + bottom_total_height > height - margin) {
+        bottom_text_y = chevron_pos.y() - sz - 15 - bottom_total_height;
+        bottom_text_y = std::max(margin, bottom_text_y);
+    }
+    float bottom_text_x = chevron_pos.x() - bottom_text_width / 2;
+    bottom_text_x = std::clamp(bottom_text_x, margin, (float)width - bottom_text_width - margin);
 
   QPoint shadow_offset(2, 2);
 
-  for (int i = 0; i < text_lines.size(); ++i) {
-    float y = text_y + (i * line_height);
-    if (y + line_height > height - margin) break;
+    // 绘制上方文本（速度）
+    for (int i = 0; i < top_text_lines.size(); ++i) {
+        float y = top_text_y + (i * line_height);
+        if (y + line_height > height - margin) break;
 
-    QRect rect(text_x, y, text_width, line_height);
+        QRect rect(top_text_x, y, top_text_width, line_height);
 
-    // Draw shadow
-    painter.setPen(QColor(0, 0, 0, (int)(200 * lead_status_alpha)));
-    painter.drawText(rect.translated(shadow_offset), Qt::AlignCenter, text_lines[i]);
+        // 绘制阴影
+        painter.setPen(QColor(0, 0, 0, (int)(200 * lead_status_alpha)));
+        painter.drawText(rect.translated(shadow_offset), Qt::AlignCenter, top_text_lines[i]);
 
-    QColor text_color = QColor(255, 255, 255, (int)(255 * lead_status_alpha));
-    if (text_lines[i].contains("m") || text_lines[i].contains("ft")) {
-      if (d_rel < 20.0f) {
-        text_color = QColor(255, 80, 80, (int)(255 * lead_status_alpha));
-      } else if (d_rel < 40.0f) {
-        text_color = QColor(255, 200, 80, (int)(255 * lead_status_alpha));
-      } else {
-        text_color = QColor(80, 255, 120, (int)(255 * lead_status_alpha));
-      }
+        // 速度信息使用与距离信息相同的颜色逻辑
+        QColor text_color = QColor(255, 255, 255, (int)(255 * lead_status_alpha));
+        // 根据距离改变颜色
+        if (d_rel < 20.0f) {
+            text_color = QColor(255, 80, 80, (int)(255 * lead_status_alpha));
+        } else if (d_rel < 40.0f) {
+            text_color = QColor(255, 200, 80, (int)(255 * lead_status_alpha));
+        } else {
+            text_color = QColor(80, 255, 120, (int)(255 * lead_status_alpha));
+        }
+
+        painter.setPen(text_color);
+        painter.drawText(rect, Qt::AlignCenter, top_text_lines[i]);
     }
 
-    painter.setPen(text_color);
-    painter.drawText(rect, Qt::AlignCenter, text_lines[i]);
-  }
+    // 绘制下方文本（距离和TTC）
+    for (int i = 0; i < bottom_text_lines.size(); ++i) {
+        float y = bottom_text_y + (i * line_height);
+        if (y + line_height > height - margin) break;
+
+        QRect rect(bottom_text_x, y, bottom_text_width, line_height);
+
+        // 绘制阴影
+        painter.setPen(QColor(0, 0, 0, (int)(200 * lead_status_alpha)));
+        painter.drawText(rect.translated(shadow_offset), Qt::AlignCenter, bottom_text_lines[i]);
+
+        QColor text_color = QColor(255, 255, 255, (int)(255 * lead_status_alpha));
+        // 只有距离信息才根据距离改变颜色
+        if (bottom_text_lines[i].contains("m") || bottom_text_lines[i].contains("ft")) {
+            if (d_rel < 20.0f) {
+                text_color = QColor(255, 80, 80, (int)(255 * lead_status_alpha));
+            } else if (d_rel < 40.0f) {
+                text_color = QColor(255, 200, 80, (int)(255 * lead_status_alpha));
+            } else {
+                text_color = QColor(80, 255, 120, (int)(255 * lead_status_alpha));
+            }
+        }
+
+        painter.setPen(text_color);
+        painter.drawText(rect, Qt::AlignCenter, bottom_text_lines[i]);
+    }
 
   painter.setPen(Qt::NoPen);
 }
