@@ -163,6 +163,121 @@ Please use caution when using this feature. Only use the blinker when traffic an
     </message>
 </context>
 <context>
+    <name>DecControllerSubpanel</name>
+    <message>
+        <source>Reset to Defaults</source>
+        <translation type="vanished">恢复默认设置</translation>
+    </message>
+    <message>
+        <source>FCW Detection</source>
+        <translation type="vanished">前碰撞警告检测</translation>
+    </message>
+    <message>
+        <source>Use blended mode when FCW is detected in the road ahead.</source>
+        <translation type="vanished">在前方检测到FCW时使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Enable at Standstill</source>
+        <translation type="vanished">启用静止状态</translation>
+    </message>
+    <message>
+        <source>Use blended mode when the vehicle is at a standstill.</source>
+        <translation type="vanished">当车辆停止时，使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Follow Lead Vehicle</source>
+        <translation type="vanished">跟随前车</translation>
+    </message>
+    <message>
+        <source>Model Slow Down Detection</source>
+        <translation type="vanished">模型减速检测</translation>
+    </message>
+    <message>
+        <source>Below Cruise Speed Detection</source>
+        <translation type="vanished">低于巡航速度检测</translation>
+    </message>
+    <message>
+        <source>Lead Vehicle Detection</source>
+        <translation type="vanished">前车检测</translation>
+    </message>
+    <message>
+        <source>Use blended mode when a lead vehicle is detected and significantly slowing.</source>
+        <translation type="vanished">在检测到前车并且明显减速时使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Significantly Slower Lead Detection</source>
+        <translation type="vanished">明显较慢的前车检测</translation>
+    </message>
+    <message>
+        <source>Stopped Lead Detection</source>
+        <translation type="vanished">停止领导检测</translation>
+    </message>
+    <message>
+        <source>Distance-Based Switching</source>
+        <translation type="vanished">基于距离的切换</translation>
+    </message>
+    <message>
+        <source>Use blended mode when the distance to the lead vehicle is below the specified threshold.</source>
+        <translation type="vanished">当与前车的距离低于指定阈值时，使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Distance Threshold</source>
+        <translation type="vanished">距离阈值</translation>
+    </message>
+    <message>
+        <source>Distance from lead vehicle in meters below which blended mode will be used.</source>
+        <translation type="vanished">低于该距离（单位为米）时将使用混合模式的前车距离。</translation>
+    </message>
+    <message>
+        <source>Speed-Based Switching</source>
+        <translation type="vanished">基于速度的切换</translation>
+    </message>
+    <message>
+        <source>Use blended mode when the vehicle speed is below the specified threshold.</source>
+        <translation type="vanished">当车速低于指定阈值时，使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Speed Threshold</source>
+        <translation type="vanished">速度阈值</translation>
+    </message>
+    <message>
+        <source>Speed in km/h below which blended mode will be used.</source>
+        <translation type="vanished">低于此速度（公里/小时）将使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Currently active. Prefers ACC with weighted confidence when following a lead vehicle for normal scenarios. If the model wants to slowdown significantly, it will still trigger blended mode.</source>
+        <translation type="vanished">当前激活。在正常情况下跟随前车时，倾向于使用带权重置信度的ACC。如果模型需要明显减速，仍将触发混合模式。</translation>
+    </message>
+    <message>
+        <source>Disabled when Follow Lead Vehicle is active. Follow Lead mode overrides this when a lead vehicle is present (except during imminent slowdown scenarios).</source>
+        <translation type="vanished">当跟随前车模式激活时禁用。当有前车存在时，跟随前车模式将覆盖此设置（紧急减速情形除外）。</translation>
+    </message>
+    <message>
+        <source>Disabled when Follow Lead Vehicle is active. Follow Lead mode overrides this when a lead vehicle is present.</source>
+        <translation type="vanished">当跟随前车模式激活时禁用。当存在前车时，跟随前车模式将覆盖此设置。</translation>
+    </message>
+    <message>
+        <source>When enabled, prefers ACC mode when following a lead vehicle for normal scenarios. Model wants to stop now situations still trigger blended mode.</source>
+        <translation type="vanished">启用后，在正常情况下跟随前车时优先使用 ACC 模式。模型希望立即停止的情况仍将触发混合模式。</translation>
+    </message>
+    <message>
+        <source>Model slow down detection and below cruise speed detection must be enabled to use this mode.</source>
+        <translation type="vanished">必须启用模型减速检测和低于巡航速度检测才能使用此模式。</translation>
+    </message>
+    <message>
+        <source>Use blended mode when the model detects a slow down scenario ahead.</source>
+        <translation type="vanished">当模型检测到前方减速情况时，使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Use blended mode when driving significantly slower than the set cruise speed.</source>
+        <translation type="vanished">当行驶速度明显低于设定的巡航速度时，使用混合模式。</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">返回</translation>
+    </message>
+</context>
+<context>
     <name>DeclinePage</name>
     <message>
         <source>Back</source>
@@ -652,6 +767,46 @@ Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模
         <source>MAX</source>
         <translation>最高定速</translation>
     </message>
+    <message>
+        <source>SPEED</source>
+        <translation>速度</translation>
+    </message>
+    <message>
+        <source>LIMIT</source>
+        <translation>限制</translation>
+    </message>
+    <message>
+        <source>AHEAD</source>
+        <translation>前方</translation>
+    </message>
+    <message>
+        <source>IGNORED</source>
+        <translation type="vanished">已忽略</translation>
+    </message>
+    <message>
+        <source>PREPARING</source>
+        <translation>准备中</translation>
+    </message>
+    <message>
+        <source>ADAPTING</source>
+        <translation>适应中</translation>
+    </message>
+    <message>
+        <source>ACTIVE</source>
+        <translation>激活状态</translation>
+    </message>
+    <message>
+        <source>TURN AHEAD</source>
+        <translation>前方转弯</translation>
+    </message>
+    <message>
+        <source>TURNING</source>
+        <translation>转向</translation>
+    </message>
+    <message>
+        <source>TURN EXIT</source>
+        <translation>出口转弯</translation>
+    </message>
 </context>
 <context>
     <name>HyundaiSettings</name>
@@ -695,6 +850,20 @@ Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模
         <source>Fine-tune your driving experience by adjusting acceleration smoothness with openpilot longitudinal control.</source>
         <translation>通过调整 openpilot 纵向控制的加速平稳性，优化您的驾驶体验。</translation>
     </message>
+    <message>
+        <source>Bookmark</source>
+        <translation type="vanished">书签</translation>
+    </message>
+    <message>
+        <source>Steering Custom ☆ Button</source>
+        <translation type="vanished">自定义方向盘 ☆ 按钮</translation>
+    </message>
+    <message>
+        <source>Customize the steering wheel custom/star button for openpilot control.
+This will not disable OEM functionality.</source>
+        <translation type="vanished">自定义方向盘上的自定义/星形按钮以控制openpilot。
+这不会禁用原厂功能。</translation>
+    </message>
 </context>
 <context>
     <name>InputDialog</name>
@@ -722,6 +891,14 @@ Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模
     <message>
         <source>Toggle to enable a delay timer for seamless lane changes when blind spot monitoring (BSM) detects a obstructing vehicle, ensuring safe maneuvering.</source>
         <translation>切换以启用延时计时器，当盲点监测（BSM）侦测到阻碍车辆时，实现无缝车道变换，确保安全操控。</translation>
+    </message>
+    <message>
+        <source>Block Lane Change: Road Edge Detection</source>
+        <translation>阻止车道变更：路缘检测</translation>
+    </message>
+    <message>
+        <source>Enable this toggle to block lane change when road edge is detected on the stalk actuated side.</source>
+        <translation>启用此开关以在检测到行动杆激活侧的路边时阻止变道。</translation>
     </message>
 </context>
 <context>
@@ -788,6 +965,58 @@ Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模
     <message>
         <source>Start the vehicle to check vehicle compatibility.</source>
         <translation>启动车辆以检查车辆兼容性。</translation>
+    </message>
+    <message>
+        <source>Vibe Personality Controller</source>
+        <translation>高级个性控制器</translation>
+    </message>
+    <message>
+        <source>Advanced driving personality system with separate controls for acceleration behavior (Eco/Normal/Sport) and following distance/braking (Relaxed/Standard/Aggressive). Customize your driving experience with independent acceleration and distance personalities.</source>
+        <translation>高级驾驶个性系统，具有独立的加速行为（节能/普通/运动）和跟车距离/刹车（放松/标准/激进）控制。通过独立的加速和距离个性定制您的驾驶体验。</translation>
+    </message>
+    <message>
+        <source>Acceleration Personality</source>
+        <translation>加速性格</translation>
+    </message>
+    <message>
+        <source>Controls acceleration behavior: Eco (efficient), Normal (balanced), Sport (responsive). Adjust how aggressively the vehicle accelerates while maintaining smooth operation.</source>
+        <translation>控制加速行为：Eco（高效）、Normal（平衡）、Sport（响应迅速）。调整车辆加速的激烈程度，同时保持平稳运行。</translation>
+    </message>
+    <message>
+        <source>Following Distance Personality</source>
+        <translation>跟车距离特性</translation>
+    </message>
+    <message>
+        <source>Controls following distance and braking behavior: Relaxed (longer distance, gentler braking), Standard (balanced), Aggressive (shorter distance, firmer braking). Fine-tune your comfort level in traffic situations.</source>
+        <translation>控制跟车距离和制动行为：轻松（较长距离，更温和的制动）、标准（平衡）、积极（较短距离，更坚定的制动）。在交通情况中微调您的舒适度。</translation>
+    </message>
+    <message>
+        <source>Speed Limit Control (SLC)</source>
+        <translation>速度限制控制 (SLC)</translation>
+    </message>
+    <message>
+        <source>When you engage ACC, you will be prompted to set the cruising speed to the speed limit of the road adjusted by the Offset and Source Policy specified, or the current driving speed. The maximum cruising speed will always be the MAX set speed.</source>
+        <translation>当您启动ACC时，系统会提示您根据指定的偏移量和来源政策调整道路速度限制或当前行驶速度来设置巡航速度。最大巡航速度将始终是设定的最高速度。</translation>
+    </message>
+    <message>
+        <source>Vision Turn Speed Controller</source>
+        <translation>视觉转向速度控制器</translation>
+    </message>
+    <message>
+        <source>Also known as V-TSC, this controller automatically slows down for curvature while OP longitudinal is engaged.</source>
+        <translation>也被称为V-TSC，当OP纵向控制启动时，该控制器会自动减速以适应道路弯曲。</translation>
+    </message>
+    <message>
+        <source>Enable Dynamic Experimental Control</source>
+        <translation type="vanished">启用动态实验控制</translation>
+    </message>
+    <message>
+        <source>Enable toggle to allow the model to determine when to use sunnypilot ACC or sunnypilot End to End Longitudinal.</source>
+        <translation type="vanished">启用开关以允许模型决定何时使用sunnypilot ACC或sunnypilot端到端纵向控制。</translation>
+    </message>
+    <message>
+        <source>Customize DEC</source>
+        <translation type="vanished">自定义 DEC</translation>
     </message>
 </context>
 <context>
@@ -1047,6 +1276,22 @@ The default software delay value is 0.2</source>
     <message>
         <source>Total Delay:</source>
         <translation>总延迟：</translation>
+    </message>
+    <message>
+        <source>Use Lane Turn Desires</source>
+        <translation>使用车道转向意愿</translation>
+    </message>
+    <message>
+        <source>Adjust Lane Turn Speed</source>
+        <translation>调整车道转弯速度</translation>
+    </message>
+    <message>
+        <source>Set the maximum speed for lane turn desires. Default is 19 %1.</source>
+        <translation>设置变道期望的最大速度。默认值为19 %1。</translation>
+    </message>
+    <message>
+        <source>If you’re driving at 20 mph (32 km/h) or below and have your blinker on, the car will plan a turn in that direction at the nearest drivable path. This prevents situations (like at red lights) where the car might plan the wrong turn direction.</source>
+        <translation>如果你以20英里/小时（32公里/小时）或更低的速度行驶并开启了转向灯，车辆会在最近的可行驶路径上计划向该方向转弯。这可以避免车辆在红灯等情况下规划错误的转弯方向。</translation>
     </message>
 </context>
 <context>
@@ -1911,7 +2156,131 @@ Warning: You are on a metered connection!</source>
     </message>
     <message>
         <source>Please enable always offroad mode or turn off vehicle to adjust these toggles</source>
-        <translation type="unfinished"></translation>
+        <translation>请启用始终离线模式或关闭车辆以调整这些开关</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControl</name>
+    <message>
+        <source>Customize SLC</source>
+        <translation>自定义SLC</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlPolicy</name>
+    <message>
+        <source>Back</source>
+        <translation>返回</translation>
+    </message>
+    <message>
+        <source>Speed Limit Source</source>
+        <translation>速度限制来源</translation>
+    </message>
+    <message>
+        <source>⦿ Car Only: Use Speed Limit data only from Car</source>
+        <translation>⦿ 仅限汽车：仅使用来自汽车的速度限制数据</translation>
+    </message>
+    <message>
+        <source>⦿ Map Only: Use Speed Limit data only from OpenStreetMaps</source>
+        <translation>⦿ 仅地图：仅使用来自OpenStreetMaps的速度限制数据</translation>
+    </message>
+    <message>
+        <source>⦿ Car First: Use Speed Limit data from Car if available, else use from OpenStreetMaps</source>
+        <translation>⦿ 优先使用车辆数据：如果车辆的限速数据可用，则使用车辆的数据，否则使用OpenStreetMaps的数据。</translation>
+    </message>
+    <message>
+        <source>⦿ Map First: Use Speed Limit data from OpenStreetMaps if available, else use from Car</source>
+        <translation>⦿ 优先使用地图：如果可用，使用OpenStreetMaps的速度限制数据，否则使用汽车的数据。</translation>
+    </message>
+    <message>
+        <source>⦿ Combined: Use combined Speed Limit data from Car &amp; OpenStreetMaps</source>
+        <translation>⦿ 组合：使用来自汽车和OpenStreetMaps的组合速度限制数据</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlSubpanel</name>
+    <message>
+        <source>Back</source>
+        <translation>返回</translation>
+    </message>
+    <message>
+        <source>Customize Warning</source>
+        <translation>自定义警告</translation>
+    </message>
+    <message>
+        <source>Customize Source</source>
+        <translation>自定义来源</translation>
+    </message>
+    <message>
+        <source>Engage Mode</source>
+        <translation>启动模式</translation>
+    </message>
+    <message>
+        <source>Speed Limit Offset</source>
+        <translation>速度限制偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Auto: Automatic speed adjustment based on speed limit data</source>
+        <translation>⦿ 自动：基于限速数据的自动速度调整</translation>
+    </message>
+    <message>
+        <source>⦿ User Confirm: Asks driver to confirm speed adjustment based on speed limit data</source>
+        <translation>⦿ 用户确认：要求驾驶员根据速度限制数据确认速度调整</translation>
+    </message>
+    <message>
+        <source>⦿ None: No Offset</source>
+        <translation>⦿ 无偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Fixed: Adds a fixed offset [Speed Limit + Offset]</source>
+        <translation>⦿ 固定：增加固定偏移量 [速度限制 + 偏移]</translation>
+    </message>
+    <message>
+        <source>⦿ Percent: Adds a percent offset [Speed Limit + (Offset % Speed Limit)]</source>
+        <translation>⦿ 百分比：添加百分比偏移量 [速度限制 + (偏移百分比 x 速度限制)]</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlWarning</name>
+    <message>
+        <source>Back</source>
+        <translation>返回</translation>
+    </message>
+    <message>
+        <source>Speed Limit Warning</source>
+        <translation>速度限制警告</translation>
+    </message>
+    <message>
+        <source>Warning Offset</source>
+        <translation>警告偏移</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>不适用</translation>
+    </message>
+    <message>
+        <source>⦿ Off: No Warning</source>
+        <translation>⦿ 关闭：无警告</translation>
+    </message>
+    <message>
+        <source>⦿ Display: Speed Limit Sign will visually alert</source>
+        <translation>⦿ 显示：速度限制标志将进行视觉提醒</translation>
+    </message>
+    <message>
+        <source>⦿ Chime: Speed Limit Sign will visually alert along with an audible chime</source>
+        <translation>⦿ 提示音：速度限制标志将视觉上提示并伴有声音提示</translation>
+    </message>
+    <message>
+        <source>⦿ None: No Offset</source>
+        <translation>⦿ 无偏移: 没有偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Fixed: Adds a fixed offset [Speed Limit + Offset]</source>
+        <translation>⦿ 固定：添加固定偏移量 [速度限制 + 偏移量]</translation>
+    </message>
+    <message>
+        <source>⦿ Percent: Adds a percent offset [Speed Limit + (Offset % Speed Limit)]</source>
+        <translation>⦿ 百分比：添加百分比偏移量 [速度限制 + (偏移量 % 速度限制)]</translation>
     </message>
 </context>
 <context>
@@ -2293,7 +2662,119 @@ Warning: You are on a metered connection!</source>
     </message>
     <message>
         <source>Enable the sunnypilot longitudinal control (alpha) toggle to allow Experimental mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>启用 sunnypilot 纵向控制（alpha）开关以允许实验模式。</translation>
+    </message>
+    <message>
+        <source>Enable drive mode btn link</source>
+        <translation>启用驾驶模式按钮链接</translation>
+    </message>
+    <message>
+        <source>Links cars drive mode btn with accel personalities based on personality (i.e., relaxed, standard, sport)</source>
+        <translation>将车辆驾驶模式按钮与基于个性的加速特性联系起来（例如，轻松、标准、运动）</translation>
+    </message>
+    <message>
+        <source>Toyota: Auto Brake Hold FOR TSS2 HYBRID CARS</source>
+        <translation>丰田：自动刹车保持，适用于TSS2混动车</translation>
+    </message>
+    <message>
+        <source>As you may auto brake hold currently supported by openpilot, this feature will allow sunnypilot to automatically hold the vehicle at a stop when the lead car is stopped. (TSS2 Hybird only)</source>
+        <translation>如您所知，openpilot目前支持自动刹车保持功能，此功能将允许sunnypilot在前车停止时自动保持车辆停止状态。（仅限TSS2混合动力车型）</translation>
+    </message>
+    <message>
+        <source>Toyota: Prius TSS2 BSM and some tssp</source>
+        <translation>丰田：普锐斯 TSS2 BSM 和部分 tssp</translation>
+    </message>
+    <message>
+        <source>Add support for BSM.</source>
+        <translation>添加BSM支持。</translation>
+    </message>
+    <message>
+        <source>Toyota: custom tune</source>
+        <translation>丰田：自定义调校</translation>
+    </message>
+    <message>
+        <source>idk something gas and brake</source>
+        <translation>不知道，油门和刹车有问题。</translation>
+    </message>
+    <message>
+        <source>Toyota: Stock Toyota Longitudinal</source>
+        <translation>丰田：原装丰田纵向系统</translation>
+    </message>
+    <message>
+        <source>This feature will allow sunnypilot to use the stock Toyota longitudinal control instead of the sunnypilot longitudinal control. </source>
+        <translation>此功能将允许sunnypilot使用原厂丰田纵向控制，而不是sunnypilot纵向控制。</translation>
+    </message>
+    <message>
+        <source>Sport</source>
+        <translation>运动</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>正常</translation>
+    </message>
+    <message>
+        <source>Eco</source>
+        <translation>节能</translation>
+    </message>
+    <message>
+        <source>Acceleration Personality</source>
+        <translation>加速性格</translation>
+    </message>
+    <message>
+        <source>Normal is recommended. In sport mode, sunnypilot will provide aggressive acceleration for a dynamic driving experience. In eco mode, sunnypilot will apply smoother and more relaxed acceleration. On supported cars, you can cycle through these acceleration personality within Onroad Settings on the driving screen.</source>
+        <translation>建议使用正常模式。在运动模式下，sunnypilot将提供更积极的加速，以带来动感的驾驶体验。在经济模式下，sunnypilot将应用更平稳、更放松的加速。在支持的汽车上，您可以在驾驶屏幕的Onroad设置中切换这些加速模式。</translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation>关闭</translation>
+    </message>
+    <message>
+        <source>Lite</source>
+        <translation>简易</translation>
+    </message>
+    <message>
+        <source>Full</source>
+        <translation>完整</translation>
+    </message>
+    <message>
+        <source>dashy</source>
+        <translation>局域传输</translation>
+    </message>
+    <message>
+        <source>dashy - dragonpilot&apos;s all-in-one system hub for you.
+
+Visit http://&lt;device_ip&gt;:5088 to access.
+
+Off - Turn off dashy completely.
+Lite: File Manager only.
+Full: File Manager + Live Stream.</source>
+        <translation>dashy - dragonpilot 的一站式系统枢纽。
+
+访问 http://&lt;device_ip&gt;:5088 进入。
+
+关闭 - 完全关闭 dashy。
+轻量版：仅文件管理器。
+完整版：文件管理器 + 实时流媒体。</translation>
+    </message>
+    <message>
+        <source>Strict</source>
+        <translation>严格</translation>
+    </message>
+    <message>
+        <source>Moderate</source>
+        <translation>适中</translation>
+    </message>
+    <message>
+        <source>Lenient</source>
+        <translation>宽松</translation>
+    </message>
+    <message>
+        <source>Set how sensitive the driver distraction detection should be. Strict: Very sensitive, warns on minor distractions. Moderate: Balanced between sensitivity and false positives. Lenient: Only alerts on clear distractions. Off: Disable Driver Distraction Detection and Control.</source>
+        <translation>设置驾驶员分心检测的灵敏度。严格模式：非常敏感，对轻微分心行为发出警告。适中模式：在敏感度和误报之间保持平衡。宽松模式：仅对明显的分心行为发出警告。关闭: 关闭驾驶员分心检测控制</translation>
+    </message>
+    <message>
+        <source>Distraction Detection Level</source>
+        <translation>分心检测等级</translation>
     </message>
 </context>
 <context>
@@ -2348,6 +2829,30 @@ Warning: You are on a metered connection!</source>
     <message>
         <source>Display useful metrics below the chevron that tracks the lead car (only applicable to cars with openpilot longitudinal control).</source>
         <translation>在跟踪前车的菱形符号下方显示有用的指标（仅适用于配备 openpilot 纵向控制的汽车）。</translation>
+    </message>
+    <message>
+        <source>Enable Tesla Rainbow Mode</source>
+        <translation>启用特斯拉彩虹模式</translation>
+    </message>
+    <message>
+        <source>Enable the rainbow mode, which displays a rainbow effect on the screen.</source>
+        <translation type="vanished">启用彩虹模式，屏幕上将显示彩虹效果。</translation>
+    </message>
+    <message>
+        <source>A beautiful rainbow effect on the path the model wants to take.</source>
+        <translation>模型预测路径上呈现出一道美丽的彩虹效果。</translation>
+    </message>
+    <message>
+        <source>It</source>
+        <translation>它</translation>
+    </message>
+    <message>
+        <source>does not</source>
+        <translation>不适用</translation>
+    </message>
+    <message>
+        <source>affect driving in any way.</source>
+        <translation>不影响驾驶。</translation>
     </message>
 </context>
 <context>
