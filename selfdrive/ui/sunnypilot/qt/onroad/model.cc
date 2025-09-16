@@ -83,12 +83,11 @@ void ModelRendererSP::drawPath(QPainter &painter, const cereal::ModelDataV2::Rea
 
     painter.setBrush(bg);
     painter.drawPolygon(track_vertices);
-  } else {
-    // Normal path rendering
-    ModelRenderer::drawPath(painter, model, surface_rect.height());
-
-    drawLeadStatus(painter, surface_rect.height(), surface_rect.width());
   }
+  // Always draw lead status regardless of RainbowMode
+  drawLeadStatus(painter, surface_rect.height(), surface_rect.width());
+  // Normal path rendering
+  ModelRenderer::drawPath(painter, model, surface_rect.height());
 }
 
 void ModelRendererSP::drawLeadStatus(QPainter &painter, int height, int width) {
