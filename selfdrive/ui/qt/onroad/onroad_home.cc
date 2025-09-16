@@ -7,7 +7,7 @@
 
 // Define indicator colors
 const QColor OnroadWindow::DP_INDICATOR_COLOR_BSM = QColor(255, 165, 0); // Orange
-const QColor OnroadWindow::DP_INDICATOR_COLOR_BLINKER = QColor(255, 255, 0); // Yellow
+const QColor OnroadWindow::DP_INDICATOR_COLOR_BLINKER = QColor(0, 255, 0); // Green
 
 OnroadWindow::OnroadWindow(QWidget *parent) : QWidget(parent) {
   QVBoxLayout *main_layout  = new QVBoxLayout(this);
@@ -55,11 +55,12 @@ void OnroadWindow::updateDpIndicatorSideState(bool blinker_state, bool bsm_state
     count += 1;
   }
   if (bsm_state && blinker_state) {
-    show = count % DP_INDICATOR_BLINK_RATE_FAST == 0? !show : show;
+    show = count % 5 == 0? !show : show; // Faster blinking for combined state
     color = DP_INDICATOR_COLOR_BSM;
   } else if (blinker_state) {
-    show = count % DP_INDICATOR_BLINK_RATE_STD == 0? !show : show;
+    show = count % 10 == 0? !show : show; // Standard blinking for turn signal
     color = DP_INDICATOR_COLOR_BLINKER;
+    //if (show) count = 0; // Reset counter to ensure consistent blinking
   } else if (bsm_state) {
     show = true;
     color = DP_INDICATOR_COLOR_BSM;
