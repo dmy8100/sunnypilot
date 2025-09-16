@@ -23,6 +23,25 @@ protected:
   QColor bg = bg_colors[STATUS_DISENGAGED];
   QHBoxLayout* split;
 
+  // Indicator state variables
+  bool dp_indicator_show_left = false;
+  bool dp_indicator_show_right = false;
+  bool dp_indicator_show_left_prev = false;
+  bool dp_indicator_show_right_prev = false;
+  int dp_indicator_count_left = 0;
+  int dp_indicator_count_right = 0;
+  QColor dp_indicator_color_left;
+  QColor dp_indicator_color_right;
+
+  // Indicator constants
+  static const QColor DP_INDICATOR_COLOR_BSM;
+  static const QColor DP_INDICATOR_COLOR_BLINKER;
+  static const int DP_INDICATOR_BLINK_RATE_FAST = 10;
+  static const int DP_INDICATOR_BLINK_RATE_STD = 20;
+
+  void updateDpIndicatorStates(const UIState &s);
+  void updateDpIndicatorSideState(bool blinker_state, bool bsm_state, bool &show, bool &show_prev, int &count, QColor &color);
+
 protected slots:
   virtual void offroadTransition(bool offroad);
   virtual void updateState(const UIState &s);
