@@ -898,7 +898,47 @@ This will not disable OEM functionality.</source>
     </message>
     <message>
         <source>Enable this toggle to block lane change when road edge is detected on the stalk actuated side.</source>
-        <translation>启用此开关以在检测到行动杆激活侧的路边时阻止变道。</translation>
+        <translation type="vanished">启用此开关以在检测到行动杆激活侧的路边时阻止变道。</translation>
+    </message>
+</context>
+<context>
+    <name>LaneTurnDesireControl</name>
+    <message>
+        <source>Lane Turn Desires</source>
+        <translation type="vanished">车道转向意图</translation>
+    </message>
+    <message>
+        <source>If you&apos;re driving at 20 mph (32 km/h) or below and have your blinker on, the car will plan a turn in that direction at the nearest drivable path. This prevents situations (like at red lights) where the car might plan the wrong turn direction.</source>
+        <translation type="vanished">当您以20英里/小时（32公里/小时）或更低的速度行驶并开启转向灯时，车辆将在最近的可行驶路径上规划该方向的转弯。这一设计可避免车辆在特定场景（如红灯等待时）误判转弯方向的情况发生。
+
+（注：根据技术文档的翻译规范，采用&quot;车辆&quot;而非&quot;汽车&quot;保持专业语境；&quot;blinker&quot;译为&quot;转向灯&quot;符合中国汽车行业术语；补充&quot;这一设计&quot;使因果逻辑更清晰；括号内&quot;红灯等待时&quot;比直译&quot;红绿灯处&quot;更准确体现实际驾驶场景；最后采用&quot;误判转弯方向&quot;既保留原意又符合中文表达习惯。）</translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="vanished">关闭</translation>
+    </message>
+    <message>
+        <source>Nudge</source>
+        <translation type="vanished">轻推</translation>
+    </message>
+    <message>
+        <source>Nudgeless</source>
+        <translation type="vanished">无干预驾驶</translation>
+    </message>
+</context>
+<context>
+    <name>LaneTurnSettings</name>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">返回</translation>
+    </message>
+    <message>
+        <source>Adjust Lane Turn Speed</source>
+        <translation type="vanished">调整车道转弯速度</translation>
+    </message>
+    <message>
+        <source>Set the maximum speed for lane turn desires. Default is 19 %1.</source>
+        <translation type="vanished">设置车道转向期望的最大速度。默认值为19%1。</translation>
     </message>
 </context>
 <context>
@@ -942,6 +982,10 @@ This will not disable OEM functionality.</source>
     <message>
         <source>This platform supports limited MADS settings.</source>
         <translation>此平台支持有限的MADS设置。</translation>
+    </message>
+    <message>
+        <source>Customize Lane Turn</source>
+        <translation type="vanished">自定义车道转向</translation>
     </message>
 </context>
 <context>
@@ -1017,6 +1061,22 @@ This will not disable OEM functionality.</source>
     <message>
         <source>Customize DEC</source>
         <translation type="vanished">自定义 DEC</translation>
+    </message>
+    <message>
+        <source>Intelligent Cruise Button Management (ICBM) (Alpha)</source>
+        <translation>智能巡航按钮管理（ICBM）（Alpha版）</translation>
+    </message>
+    <message>
+        <source>When enabled, sunnypilot will attempt to manage the built-in cruise control buttons by emulating button presses for limited longitudinal control.</source>
+        <translation>启用后，sunnypilot将尝试通过模拟按钮按下动作来管理内置巡航控制按钮，以实现有限的纵向控制。</translation>
+    </message>
+    <message>
+        <source>Smart Cruise Control - Vision</source>
+        <translation>智能巡航控制 - 视觉</translation>
+    </message>
+    <message>
+        <source>Use vision path predictions to estimate the appropriate speed to drive through turns ahead.</source>
+        <translation>利用视觉路径预测来预估通过前方弯道的合适速度。</translation>
     </message>
 </context>
 <context>
