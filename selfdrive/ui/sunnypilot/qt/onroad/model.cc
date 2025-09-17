@@ -30,66 +30,70 @@ void ModelRendererSP::drawPath(QPainter &painter, const cereal::ModelDataV2::Rea
     bool left_blindspot = sm["carState"].getCarState().getLeftBlindspot();
     bool right_blindspot = sm["carState"].getCarState().getRightBlindspot();
 
-    //painter.setBrush(QColor::fromRgbF(1.0, 0.0, 0.0, 0.4));  // Red with alpha for blind spot
-
     if (left_blindspot && !left_blindspot_vertices.isEmpty()) {
-      QLinearGradient gradient(0, 0, surface_rect.width(), 0); // Horizontal gradient from left to right
-      gradient.setColorAt(0.0, QColor(255, 165, 0, 102)); // Orange with alpha
-      gradient.setColorAt(1.0, QColor(255, 255, 0, 102)); // Yellow with alpha
+      QLinearGradient gradient(0, 0, surface_rect.width(), 0);
+      gradient.setColorAt(0.0, QColor(255, 165, 0, 102));
+      gradient.setColorAt(1.0, QColor(255, 255, 0, 102));
       painter.setBrush(gradient);
       painter.drawPolygon(left_blindspot_vertices);
     }
 
     if (right_blindspot && !right_blindspot_vertices.isEmpty()) {
-      QLinearGradient gradient(surface_rect.width(), 0, 0, 0); // Horizontal gradient from right to left
-      gradient.setColorAt(0.0, QColor(255, 165, 0, 102)); // Orange with alpha
-      gradient.setColorAt(1.0, QColor(255, 255, 0, 102)); // Yellow with alpha
+      QLinearGradient gradient(surface_rect.width(), 0, 0, 0);
+      gradient.setColorAt(0.0, QColor(255, 165, 0, 102));
+      gradient.setColorAt(1.0, QColor(255, 255, 0, 102));
       painter.setBrush(gradient);
       painter.drawPolygon(right_blindspot_vertices);
     }
   }
 
   bool rainbow = Params().getBool("RainbowMode");
-  //float v_ego = sm["carState"].getCarState().getVEgo();
 
   if (rainbow) {
-    // Simple time-based animation
-    float time_offset = std::chrono::duration_cast<std::chrono::milliseconds>(
-        std::chrono::steady_clock::now().time_since_epoch()).count() / 1000.0f;
+    // 使用DP的彩虹模式实现
+    constexpr int NUM_COLORS = 25;
+    constexpr int ALPHA = 128;
+    float v_ego = sm["carState"].getCarState().getVEgo();
 
-    // simple linear gradient from bottom to top
+    if (!dp_rainbow_init) {
+      dp_rainbow_color_list.reserve(NUM_COLORS);
+      for (int i = 0; i < NUM_COLORS; ++i) {
+        qreal t = static_cast<qreal>(i) / (NUM_COLORS - 1);
+        dp_rainbow_color_list.append(QColor::fromHsvF(t, 1.0, 1.0, ALPHA / 255.0));
+      }
+      dp_rainbow_init = true;
+    }
+
     QLinearGradient bg(0, surface_rect.height(), 0, 0);
+    bg.setSpread(QGradient::RepeatSpread);
 
-    // evenly spaced colors across the spectrum
-    // The animation shifts the entire spectrum smoothly
-    float animation_speed = 40.0f; // speed vroom vroom
-    float hue_offset = fmod(time_offset * animation_speed, 360.0f);
+    // 速度越快，彩虹移动越快
+    qreal rotation_speed = std::max(0.01f, v_ego) / UI_FREQ;
+    dp_rainbow_rotation -= rotation_speed;
 
-    // 6-8 color stops for smooth transitions more color makes it laggy
-    const int num_stops = 7;
-    for (int i = 0; i < num_stops; i++) {
-      float position = static_cast<float>(i) / (num_stops - 1);
+    if (dp_rainbow_rotation < 0.0) {
+      dp_rainbow_rotation += 1.0;
+      dp_rainbow_color_list.append(dp_rainbow_color_list.takeFirst());
+    }
 
-      float hue = fmod(hue_offset + position * 360.0f, 360.0f);
-      float saturation = 0.9f;
-      float lightness = 0.6f;
-
-      // Alpha fades out towards the far end of the path
-      float alpha = 0.8f * (1.0f - position * 0.3f);
-
-      QColor color = QColor::fromHslF(hue / 360.0f, saturation, lightness, alpha);
-      bg.setColorAt(position, color);
+    // 填充颜色
+    const qreal step = 1.0 / (NUM_COLORS - 1);
+    for (int i = 0; i < NUM_COLORS; ++i) {
+      bg.setColorAt(i * step, dp_rainbow_color_list.at(i));
     }
 
     painter.setBrush(bg);
     painter.drawPolygon(track_vertices);
+  } else {
+    // 正常路径渲染
+    ModelRenderer::drawPath(painter, model, surface_rect.height());
   }
-  // Always draw lead status regardless of RainbowMode
+
+  // 始终绘制前车状态（无论是否启用彩虹模式）
   drawLeadStatus(painter, surface_rect.height(), surface_rect.width());
-  // Normal path rendering
-  ModelRenderer::drawPath(painter, model, surface_rect.height());
 }
 
+// 以下drawLeadStatus和drawLeadStatusAtPosition函数保持不变...
 void ModelRendererSP::drawLeadStatus(QPainter &painter, int height, int width) {
     auto *s = uiState();
     auto &sm = *(s->sm);

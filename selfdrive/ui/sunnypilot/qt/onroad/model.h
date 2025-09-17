@@ -30,4 +30,9 @@ private:
 
   // Lead status animation
   float lead_status_alpha = 0.0f;
+  
+  // DP Rainbow mode variables
+  bool dp_rainbow_init = false;
+  QList<QColor> dp_rainbow_color_list;
+  qreal dp_rainbow_rotation = 0.0;
 };
