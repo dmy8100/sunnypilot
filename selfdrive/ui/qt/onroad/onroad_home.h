@@ -10,6 +10,9 @@
 #include "selfdrive/ui/qt/onroad/annotated_camera.h"
 #endif
 
+// 前向声明
+class LongitudinalPersonalityButton;
+
 class OnroadWindow : public QWidget {
   Q_OBJECT
 
@@ -22,6 +25,9 @@ protected:
   AnnotatedCameraWidget *nvg;
   QColor bg = bg_colors[STATUS_DISENGAGED];
   QHBoxLayout* split;
+  
+  // 添加LongitudinalPersonalityButton成员变量
+  LongitudinalPersonalityButton *longitudinal_personality_button;
 
   // Indicator state variables
   bool dp_indicator_show_left = false;
