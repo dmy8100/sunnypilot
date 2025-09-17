@@ -31,8 +31,21 @@ OnroadWindow::OnroadWindow(QWidget *parent) : QWidget(parent) {
   alerts->setAttribute(Qt::WA_TransparentForMouseEvents, true);
   stacked_layout->addWidget(alerts);
 
+  // 添加LongitudinalPersonalityButton
+  QWidget *button_container = new QWidget(this);
+  //button_container->setAttribute(Qt::WA_TransparentForMouseEvents, true);
+  QHBoxLayout *button_layout = new QHBoxLayout(button_container);
+  button_layout->setContentsMargins(UI_BORDER_SIZE, UI_BORDER_SIZE, UI_BORDER_SIZE, UI_BORDER_SIZE);
+  button_layout->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
+  
+  longitudinal_personality_button = new LongitudinalPersonalityButton(button_container);
+  button_layout->addWidget(longitudinal_personality_button);
+  
+  stacked_layout->addWidget(button_container);
+
   // setup stacking order
   alerts->raise();
+  button_container->raise();
 
   setAttribute(Qt::WA_OpaquePaintEvent);
 
@@ -50,6 +63,11 @@ void OnroadWindow::updateState(const UIState &s) {
 
   alerts->updateState(s);
   nvg->updateState(s);
+  
+  // 更新LongitudinalPersonalityButton状态
+  if (longitudinal_personality_button) {
+    longitudinal_personality_button->updateState(s);
+  }
 
   QColor bgColor = bg_colors[s.status];
   if (bg != bgColor) {

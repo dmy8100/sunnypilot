@@ -69,7 +69,7 @@ void DriverMonitorRenderer::draw(QPainter &painter, const QRect &surface_rect) {
   painter.save();
 
   int offset = UI_BORDER_SIZE + btn_size / 2;
-  float x = is_rhd ? surface_rect.width() - offset : offset;
+  float x = is_rhd ? surface_rect.width() - offset : offset + 200;
   float y = surface_rect.height() - offset;
   float opacity = is_active ? 0.65f : 0.2f;
 
