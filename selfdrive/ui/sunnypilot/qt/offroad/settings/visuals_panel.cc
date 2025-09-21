@@ -49,6 +49,13 @@ VisualsPanel::VisualsPanel(QWidget *parent) : QWidget(parent) {
       "",
       false,
     },
+    {
+      "VisualStyleBlend",
+      tr("Morph to Overhead Visual Style"),
+      tr("Morphing to Overhead view when using Minimal/Vision visual style."),
+      "../assets/offroad/icon_monitoring.png",
+      false,
+    },
   };
 
   // Add regular toggles first
@@ -74,6 +81,15 @@ VisualsPanel::VisualsPanel(QWidget *parent) : QWidget(parent) {
     toggles[param.toStdString()] = toggle;
     param_watcher->addParam(param);
   }
+
+  // Visuals: Visual Style
+  std::vector<QString> visual_style_settings_texts{tr("Default"), tr("Minimal"), tr("Vision"), tr("Overhead")};
+  visual_style_settings = new ButtonParamControlSP(
+    "VisualStyle", tr("Visual Style"), tr("Controls how the road and driving environment are displayed in the onroad UI."),
+    "",
+    visual_style_settings_texts,
+    250);
+  list->addItem(visual_style_settings);
 
   // Visuals: Display Metrics below Chevron
   std::vector<QString> chevron_info_settings_texts{tr("Off"), tr("Distance"), tr("Speed"), tr("Time"), tr("All")};
@@ -158,5 +174,8 @@ void VisualsPanel::paramsRefresh() {
   }
   if (dev_ui_settings) {
     dev_ui_settings->refresh();
+  }
+  if (visual_style_settings) {
+    visual_style_settings->refresh();
   }
 }
