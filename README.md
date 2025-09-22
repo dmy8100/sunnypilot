@@ -1,4 +1,6 @@
-![](https://user-images.githubusercontent.com/47793918/233812617-beab2e71-57b9-479e-8bff-c3931347ca40.png)
+ ## ! ! ! 免责声明！！！
+本仓库只是用来知识共享学习；请遵守当地法律法规，所产生的一切后果与开发者无关！
+![](https://user-images.bgithub.xyz/47793918/233812617-beab2e71-57b9-479e-8bff-c3931347ca40.png)
 
 ## 🌞 What is sunnypilot?
 [sunnypilot](https://github.com/sunnyhaibin/sunnypilot) is a fork of comma.ai's openpilot, an open source driver assistance system. sunnypilot offers the user a unique driving experience for over 300+ supported car makes and models with modified behaviors of driving assist engagements. sunnypilot complies with comma.ai's safety rules as accurately as possible.
@@ -114,8 +116,8 @@ By becoming a sponsor, you will gain access to exclusive content, early access t
 
 <h3>GitHub Sponsor</h3>
 
-<a href="https://github.com/sponsors/sunnyhaibin">
-  <img src="https://user-images.githubusercontent.com/47793918/244135584-9800acbd-69fd-4b2b-bec9-e5fa2d85c817.png" alt="Become a Sponsor" width="300" style="max-width: 100%; height: auto;">
+<a href="https://bgithub.xyz/sponsors/sunnyhaibin">
+  <img src="https://user-images.bgithub.xyz/47793918/244135584-9800acbd-69fd-4b2b-bec9-e5fa2d85c817.png" alt="Become a Sponsor" width="300" style="max-width: 100%; height: auto;">
 </a>
 <br>
 
