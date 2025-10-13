@@ -75,8 +75,8 @@
         <translation>输入密码</translation>
     </message>
     <message>
-        <source>for &quot;%1&quot;</source>
-        <translation>网络名称：&quot;%1&quot;</translation>
+        <source>for "%1"</source>
+        <translation>网络名称："%1"</translation>
     </message>
     <message>
         <source>Prevent large data uploads when on a metered cellular connection</source>
@@ -135,20 +135,20 @@ Please use caution when using this feature. Only use the blinker when traffic an
 <context>
     <name>Brightness</name>
     <message>
+        <source>Brightness</source>
+        <translation>亮度</translation>
+    </message>
+    <message>
+        <source>Overrides the brightness of the device.</source>
+        <translation>覆盖设备的亮度设置。</translation>
+    </message>
+    <message>
         <source>Auto (Dark)</source>
-        <translation type="unfinished"></translation>
+        <translation>自动（暗色）</translation>
     </message>
     <message>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Global Brightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Overrides the brightness of the device. This applies to both onroad and offroad screens. </source>
-        <translation type="unfinished"></translation>
+        <translation>自动</translation>
     </message>
 </context>
 <context>
@@ -319,7 +319,7 @@ Please use caution when using this feature. Only use the blinker when traffic an
         <translation>ADB（Android调试桥接）允许通过USB或网络连接到您的设备。更多信息请参见 [https://docs.comma.ai/how-to/connect-to-comma](https://docs.comma.ai/how-to/connect-to-comma)。</translation>
     </message>
     <message>
-        <source>On this car, sunnypilot defaults to the car&apos;s built-in ACC instead of openpilot&apos;s longitudinal control. Enable this to switch to openpilot longitudinal control. Enabling Experimental mode is recommended when enabling openpilot longitudinal control alpha.</source>
+        <source>On this car, sunnypilot defaults to the car's built-in ACC instead of openpilot's longitudinal control. Enable this to switch to openpilot longitudinal control. Enabling Experimental mode is recommended when enabling openpilot longitudinal control alpha.</source>
         <translation>在此车辆上，sunnypilot 默认使用车辆内置的 ACC 而非 openpilot 的纵向控制。启用此选项可切换到 openpilot 纵向控制。建议在启用 openpilot 纵向控制 Alpha 版本时同时启用试验模式。</translation>
     </message>
 </context>
@@ -364,16 +364,24 @@ This only toggles the visibility of the controls; it does not toggle the actual 
         <translation>启用时，将创建一个预构建文件以加速启动时间。禁用时，会立即删除预构建文件以便重新编译本地编辑的 C++ 文件。&lt;br&gt;&lt;br&gt;&lt;b&gt;若要在设备上本地编辑 C++ 文件，必须先禁用此选项以便重新编译更改。&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>Quickboot mode requires updates to be disabled.&lt;br&gt;Enable &apos;Disable Updates&apos; in the Software panel first.</source>
-        <translation type="unfinished"></translation>
+        <source>Quickboot mode requires updates to be disabled.&lt;br&gt;Enable 'Disable Updates' in the Software panel first.</source>
+        <translation>快速启动模式需要禁用更新。&lt;br&gt;请先在软件面板中启用“禁用更新”。</translation>
+    </message>
+    <message>
+        <source>Use Raylib UI</source>
+        <translation type="vanished">使用 Raylib UI</translation>
+    </message>
+    <message>
+        <source>Enables or disables the use of Raylib for UI rendering. Changing this will trigger a UI restart.</source>
+        <translation type="vanished">启用或禁用使用 Raylib 进行 UI 渲染。更改此设置将触发 UI 重启。</translation>
     </message>
     <message>
         <source>Enable Copyparty service</source>
-        <translation type="unfinished"></translation>
+        <translation>启用Copyparty服务</translation>
     </message>
     <message>
-        <source>Copyparty is a very capable file server, you can use it to download your routes, view your logs and even make some edits on some files from your browser. Requires you to connect to your comma locally via it&apos;s IP.</source>
-        <translation type="unfinished"></translation>
+        <source>Copyparty is a very capable file server, you can use it to download your routes, view your logs and even make some edits on some files from your browser. Requires you to connect to your comma locally via it's IP.</source>
+        <translation>Copyparty是一款功能强大的文件服务器，您可以通过它下载行车路线、查看日志记录，甚至直接在浏览器中对某些文件进行编辑。使用前需通过设备IP地址在本地网络连接到您的comma设备。</translation>
     </message>
 </context>
 <context>
@@ -594,6 +602,16 @@ Steering lag calibration is complete.</source>
         <translation>唤醒行为</translation>
     </message>
     <message>
+        <source>Interactivity Timeout</source>
+        <translation>交互超时</translation>
+    </message>
+    <message>
+        <source>Apply a custom timeout for settings UI.
+This is the time after which settings UI closes automatically if user is not interacting with the screen.</source>
+        <translation>为设置界面应用自定义超时时间。
+如果用户未与屏幕交互，设置界面将在该时间后自动关闭。</translation>
+    </message>
+    <message>
         <source>Reboot</source>
         <translation>重启</translation>
     </message>
@@ -638,6 +656,10 @@ Steering lag calibration is complete.</source>
         <translation>退出“始终离线”模式</translation>
     </message>
     <message>
+        <source>Always Offroad</source>
+        <translation>始终离线</translation>
+    </message>
+    <message>
         <source>⁍ Default: Device will boot/wake-up normally &amp; will be ready to engage.</source>
         <translation>⁍ 默认：设备将正常启动/唤醒，并准备就绪。</translation>
     </message>
@@ -647,35 +669,46 @@ Steering lag calibration is complete.</source>
     </message>
     <message>
         <source>Controls state of the device after boot/sleep.</source>
-        <translation type="unfinished"></translation>
+        <translation>控制设备在启动/睡眠后的状态。</translation>
     </message>
     <message>
-        <source>Onroad Uploads</source>
-        <translation type="unfinished"></translation>
+        <source>Default</source>
+        <translation type="vanished">默认</translation>
     </message>
     <message>
-        <source>Enable Always Offroad</source>
-        <translation type="unfinished"></translation>
+        <source>Offroad</source>
+        <translation type="vanished">离线</translation>
+    </message>
+    <message>
+        <source>Git Pull &amp; Reboot</source>
+        <translation type="vanished">Git拉取和重启</translation>
+    </message>
+    <message>
+        <source>Git pull &amp; Reboot?</source>
+        <translation type="vanished">是否进行Git拉取和重启?</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation type="vanished">是的</translation>
+    </message>
+    <message>
+        <source>Failed to start update process.</source>
+        <translation type="vanished">更新重启失败</translation>
+    </message>
+    <message>
+        <source>Update process started. Device will reboot if updates are applied.</source>
+        <translation type="vanished">更新进程已启动。如果应用更新，设备将重启。</translation>
     </message>
 </context>
 <context>
     <name>DisplayPanel</name>
     <message>
-        <source>Onroad Screen: Reduced Brightness</source>
-        <translation type="unfinished"></translation>
+        <source>Driving Screen Off: Non-Critical Events</source>
+        <translation>驾驶屏幕关闭：非关键事件</translation>
     </message>
     <message>
-        <source>Turn off device screen or reduce brightness after driving starts. It automatically brightens again when screen is touched or a visible alert is displayed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Interactivity Timeout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Apply a custom timeout for settings UI.
-This is the time after which settings UI closes automatically if user is not interacting with the screen.</source>
-        <translation type="unfinished"></translation>
+        <source>Turn off device screen or reduce brightness after driving starts. It automatically brightens again when screen is touched or a critical event occurs.</source>
+        <translation>在驾驶开始后关闭设备屏幕或降低亮度。当触摸屏幕或发生关键事件时，屏幕会自动恢复亮度。</translation>
     </message>
 </context>
 <context>
@@ -742,55 +775,55 @@ This is the time after which settings UI closes automatically if user is not int
     <name>ExternalStorageControl</name>
     <message>
         <source>External Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>外部存储</translation>
     </message>
     <message>
-        <source>Extend your comma device&apos;s storage by inserting a USB drive into the aux port.</source>
-        <translation type="unfinished"></translation>
+        <source>Extend your comma device's storage by inserting a USB drive into the aux port.</source>
+        <translation>通过将USB驱动器插入辅助端口来扩展您的comma设备的存储空间。</translation>
     </message>
     <message>
         <source>CHECK</source>
-        <translation type="unfinished">查看</translation>
+        <translation>检查</translation>
     </message>
     <message>
         <source>MOUNT</source>
-        <translation type="unfinished"></translation>
+        <translation>安装</translation>
     </message>
     <message>
         <source>UNMOUNT</source>
-        <translation type="unfinished"></translation>
+        <translation>卸载</translation>
     </message>
     <message>
         <source>FORMAT</source>
-        <translation type="unfinished"></translation>
+        <translation>格式化</translation>
     </message>
     <message>
         <source>Are you sure you want to format this drive? This will erase all data.</source>
-        <translation type="unfinished"></translation>
+        <translation>您确定要格式化此驱动器吗？这将擦除所有数据。</translation>
     </message>
     <message>
         <source>Format</source>
-        <translation type="unfinished"></translation>
+        <translation>格式化</translation>
     </message>
     <message>
         <source>formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>格式化</translation>
     </message>
     <message>
         <source>insert drive</source>
-        <translation type="unfinished"></translation>
+        <translation>插入驱动器</translation>
     </message>
     <message>
         <source>needs format</source>
-        <translation type="unfinished"></translation>
+        <translation>需要格式化</translation>
     </message>
     <message>
         <source>mounting</source>
-        <translation type="unfinished"></translation>
+        <translation>安装中</translation>
     </message>
     <message>
         <source>unmounting</source>
-        <translation type="unfinished"></translation>
+        <translation>卸载中</translation>
     </message>
 </context>
 <context>
@@ -810,8 +843,8 @@ This is the time after which settings UI closes automatically if user is not int
         </translation>
     </message>
     <message>
-        <source>&lt;span stylesheet=&apos;font-size: 60px; font-weight: bold; color: #e74c3c;&apos;&gt;INACTIVE&lt;/span&gt;: connect to an unmetered network</source>
-        <translation>&lt;span stylesheet=&apos;font-size: 60px; font-weight: bold; color: #e74c3c;&apos;&gt;闲置&lt;/span&gt;：请连接到不限流量的网络</translation>
+        <source>&lt;span stylesheet='font-size: 60px; font-weight: bold; color: #e74c3c;'&gt;INACTIVE&lt;/span&gt;: connect to an unmetered network</source>
+        <translation>&lt;span stylesheet='font-size: 60px; font-weight: bold; color: #e74c3c;'&gt;闲置&lt;/span&gt;：请连接到不限流量的网络</translation>
     </message>
     <message>
         <source>Firehose Mode</source>
@@ -820,13 +853,13 @@ This is the time after which settings UI closes automatically if user is not int
     <message>
         <source>sunnypilot learns to drive by watching humans, like you, drive.
 
-Firehose Mode allows you to maximize your training data uploads to improve openpilot&apos;s driving models. More data means bigger models, which means better Experimental Mode.</source>
+Firehose Mode allows you to maximize your training data uploads to improve openpilot's driving models. More data means bigger models, which means better Experimental Mode.</source>
         <translation>sunnypilot 通过观察人类驾驶来学习驾驶。
 
 Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模型。更多的数据意味着更大的模型，这意味着更好的实验模式。</translation>
     </message>
     <message>
-        <source>For maximum effectiveness, bring your device inside and connect to a good USB-C adapter and Wi-Fi weekly.&lt;br&gt;&lt;br&gt;Firehose Mode can also work while you&apos;re driving if connected to a hotspot or unlimited SIM card.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Frequently Asked Questions&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Does it matter how or where I drive?&lt;/i&gt; Nope, just drive as you normally would.&lt;br&gt;&lt;br&gt;&lt;i&gt;Do all of my segments get pulled in Firehose Mode?&lt;/i&gt; No, we selectively pull a subset of your segments.&lt;br&gt;&lt;br&gt;&lt;i&gt;What&apos;s a good USB-C adapter?&lt;/i&gt; Any fast phone or laptop charger should be fine.&lt;br&gt;&lt;br&gt;&lt;i&gt;Does it matter which software I run?&lt;/i&gt; Yes, only upstream sunnypilot (and particular forks) are able to be used for training.</source>
+        <source>For maximum effectiveness, bring your device inside and connect to a good USB-C adapter and Wi-Fi weekly.&lt;br&gt;&lt;br&gt;Firehose Mode can also work while you're driving if connected to a hotspot or unlimited SIM card.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Frequently Asked Questions&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Does it matter how or where I drive?&lt;/i&gt; Nope, just drive as you normally would.&lt;br&gt;&lt;br&gt;&lt;i&gt;Do all of my segments get pulled in Firehose Mode?&lt;/i&gt; No, we selectively pull a subset of your segments.&lt;br&gt;&lt;br&gt;&lt;i&gt;What's a good USB-C adapter?&lt;/i&gt; Any fast phone or laptop charger should be fine.&lt;br&gt;&lt;br&gt;&lt;i&gt;Does it matter which software I run?&lt;/i&gt; Yes, only upstream sunnypilot (and particular forks) are able to be used for training.</source>
         <translation>要确保设备发挥最大效用，请每周将设备带入室内，连接到优质的USB-C适配器和Wi-Fi。&lt;br&gt;&lt;br&gt;即使在驾驶过程中，只要连接到热点或无限流量SIM卡，Firehose模式也能正常工作。&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;常见问题解答&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;我如何驾驶或在哪里驾驶是否重要？&lt;/i&gt; 不，只需像平常一样驾驶即可。&lt;br&gt;&lt;br&gt;&lt;i&gt;我的所有行程段是否都会在Firehose模式下被拉取？&lt;/i&gt; 不，我们会选择性地拉取部分行程段。&lt;br&gt;&lt;br&gt;&lt;i&gt;什么是好的USB-C适配器？&lt;/i&gt; 任何快速的手机或笔记本电脑充电器都应该可以。&lt;br&gt;&lt;br&gt;&lt;i&gt;运行哪种软件是否重要？&lt;/i&gt; 是的，只有上游的sunnypilot（及特定分支）能用于训练。</translation>
     </message>
 </context>
@@ -844,62 +877,115 @@ Firehose模式允许您最大化训练数据上传以改善openpilot的驾驶模
         <source>MAX</source>
         <translation>最高定速</translation>
     </message>
+    <message>
+        <source>SPEED</source>
+        <translation type="vanished">速度</translation>
+    </message>
+    <message>
+        <source>LIMIT</source>
+        <translation type="vanished">限制</translation>
+    </message>
+    <message>
+        <source>AHEAD</source>
+        <translation type="vanished">前方</translation>
+    </message>
+    <message>
+        <source>IGNORED</source>
+        <translation type="vanished">已忽略</translation>
+    </message>
+    <message>
+        <source>PREPARING</source>
+        <translation type="vanished">准备中</translation>
+    </message>
+    <message>
+        <source>ADAPTING</source>
+        <translation type="vanished">适应中</translation>
+    </message>
+    <message>
+        <source>ACTIVE</source>
+        <translation type="vanished">激活状态</translation>
+    </message>
+    <message>
+        <source>TURN AHEAD</source>
+        <translation type="vanished">前方转弯</translation>
+    </message>
+    <message>
+        <source>TURNING</source>
+        <translation type="vanished">转向</translation>
+    </message>
+    <message>
+        <source>TURN EXIT</source>
+        <translation type="vanished">出口转弯</translation>
+    </message>
 </context>
 <context>
     <name>HudRendererSP</name>
     <message>
         <source>km/h</source>
-        <translation type="unfinished">km/h</translation>
+        <translation>公里/小时</translation>
     </message>
     <message>
         <source>mph</source>
-        <translation type="unfinished">mph</translation>
+        <translation>英里/小时</translation>
+    </message>
+    <message>
+        <source>MAX</source>
+        <translation>最大</translation>
+    </message>
+    <message>
+        <source>SPEED</source>
+        <translation>速度</translation>
+    </message>
+    <message>
+        <source>LIMIT</source>
+        <translation>限制</translation>
+    </message>
+    <message>
+        <source>AHEAD</source>
+        <translation>前方</translation>
+    </message>
+    <message>
+        <source>PREPARING</source>
+        <translation type="vanished">准备中</translation>
+    </message>
+    <message>
+        <source>ADAPTING</source>
+        <translation type="vanished">正在适配</translation>
+    </message>
+    <message>
+        <source>ACTIVE</source>
+        <translation type="vanished">激活</translation>
+    </message>
+    <message>
+        <source>Near</source>
+        <translation>附近</translation>
+    </message>
+    <message>
+        <source>km</source>
+        <translation>km</translation>
+    </message>
+    <message>
+        <source>m</source>
+        <translation>m</translation>
+    </message>
+    <message>
+        <source>mi</source>
+        <translation>mi</translation>
+    </message>
+    <message>
+        <source>ft</source>
+        <translation>ft</translation>
     </message>
     <message>
         <source>GREEN
 LIGHT</source>
-        <translation type="unfinished"></translation>
+        <translation>绿灯</translation>
     </message>
     <message>
         <source>LEAD VEHICLE
 DEPARTING</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SPEED</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>LIMIT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Near</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>km</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>m</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ft</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>AHEAD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MAX</source>
-        <translation type="unfinished">最高定速</translation>
+        <translation>前车  
+正在离开</translation>
     </message>
 </context>
 <context>
@@ -925,7 +1011,7 @@ DEPARTING</source>
         <translation>此功能仅在启用openpilot纵向控制时可用。</translation>
     </message>
     <message>
-        <source>Enable &quot;Always Offroad&quot; in Device panel, or turn vehicle off to select an option.</source>
+        <source>Enable "Always Offroad" in Device panel, or turn vehicle off to select an option.</source>
         <translation>在设备面板中启用“始终离线”或关闭车辆以选择一个选项。</translation>
     </message>
     <message>
@@ -1002,10 +1088,10 @@ This will not disable OEM functionality.</source>
         <translation type="vanished">车道转向意图</translation>
     </message>
     <message>
-        <source>If you&apos;re driving at 20 mph (32 km/h) or below and have your blinker on, the car will plan a turn in that direction at the nearest drivable path. This prevents situations (like at red lights) where the car might plan the wrong turn direction.</source>
+        <source>If you're driving at 20 mph (32 km/h) or below and have your blinker on, the car will plan a turn in that direction at the nearest drivable path. This prevents situations (like at red lights) where the car might plan the wrong turn direction.</source>
         <translation type="vanished">当您以20英里/小时（32公里/小时）或更低的速度行驶并开启转向灯时，车辆将在最近的可行驶路径上规划该方向的转弯。这一设计可避免车辆在特定场景（如红灯等待时）误判转弯方向的情况发生。
 
-（注：根据技术文档的翻译规范，采用&quot;车辆&quot;而非&quot;汽车&quot;保持专业语境；&quot;blinker&quot;译为&quot;转向灯&quot;符合中国汽车行业术语；补充&quot;这一设计&quot;使因果逻辑更清晰；括号内&quot;红灯等待时&quot;比直译&quot;红绿灯处&quot;更准确体现实际驾驶场景；最后采用&quot;误判转弯方向&quot;既保留原意又符合中文表达习惯。）</translation>
+（注：根据技术文档的翻译规范，采用"车辆"而非"汽车"保持专业语境；"blinker"译为"转向灯"符合中国汽车行业术语；补充"这一设计"使因果逻辑更清晰；括号内"红灯等待时"比直译"红绿灯处"更准确体现实际驾驶场景；最后采用"误判转弯方向"既保留原意又符合中文表达习惯。）</translation>
     </message>
     <message>
         <source>Off</source>
@@ -1075,19 +1161,11 @@ This will not disable OEM functionality.</source>
     </message>
     <message>
         <source>This platform supports limited MADS settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>此平台支持有限的MADS设置。</translation>
     </message>
     <message>
-        <source>Enforce Torque Lateral Control</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enable this to enforce sunnypilot to steer with Torque lateral control.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Customize Params</source>
-        <translation type="unfinished"></translation>
+        <source>Customize Lane Turn</source>
+        <translation type="vanished">自定义车道转向</translation>
     </message>
 </context>
 <context>
@@ -1110,35 +1188,87 @@ This will not disable OEM functionality.</source>
     </message>
     <message>
         <source>Start the vehicle to check vehicle compatibility.</source>
-        <translation type="unfinished"></translation>
+        <translation>启动车辆以检查车辆兼容性。</translation>
+    </message>
+    <message>
+        <source>Vibe Personality Controller</source>
+        <translation type="vanished">高级个性控制器</translation>
+    </message>
+    <message>
+        <source>Advanced driving personality system with separate controls for acceleration behavior (Eco/Normal/Sport) and following distance/braking (Relaxed/Standard/Aggressive). Customize your driving experience with independent acceleration and distance personalities.</source>
+        <translation type="vanished">高级驾驶个性系统，具有独立的加速行为（节能/普通/运动）和跟车距离/刹车（放松/标准/激进）控制。通过独立的加速和距离个性定制您的驾驶体验。</translation>
+    </message>
+    <message>
+        <source>Acceleration Personality</source>
+        <translation type="vanished">加速性格</translation>
+    </message>
+    <message>
+        <source>Controls acceleration behavior: Eco (efficient), Normal (balanced), Sport (responsive). Adjust how aggressively the vehicle accelerates while maintaining smooth operation.</source>
+        <translation type="vanished">控制加速行为：Eco（高效）、Normal（平衡）、Sport（响应迅速）。调整车辆加速的激烈程度，同时保持平稳运行。</translation>
+    </message>
+    <message>
+        <source>Following Distance Personality</source>
+        <translation type="vanished">跟车距离特性</translation>
+    </message>
+    <message>
+        <source>Controls following distance and braking behavior: Relaxed (longer distance, gentler braking), Standard (balanced), Aggressive (shorter distance, firmer braking). Fine-tune your comfort level in traffic situations.</source>
+        <translation type="vanished">控制跟车距离和制动行为：轻松（较长距离，更温和的制动）、标准（平衡）、积极（较短距离，更坚定的制动）。在交通情况中微调您的舒适度。</translation>
+    </message>
+    <message>
+        <source>Speed Limit Control (SLC)</source>
+        <translation type="vanished">速度限制控制 (SLC)</translation>
+    </message>
+    <message>
+        <source>When you engage ACC, you will be prompted to set the cruising speed to the speed limit of the road adjusted by the Offset and Source Policy specified, or the current driving speed. The maximum cruising speed will always be the MAX set speed.</source>
+        <translation type="vanished">当您启动ACC时，系统会提示您根据指定的偏移量和来源政策调整道路速度限制或当前行驶速度来设置巡航速度。最大巡航速度将始终是设定的最高速度。</translation>
+    </message>
+    <message>
+        <source>Vision Turn Speed Controller</source>
+        <translation type="vanished">视觉转向速度控制器</translation>
+    </message>
+    <message>
+        <source>Also known as V-TSC, this controller automatically slows down for curvature while OP longitudinal is engaged.</source>
+        <translation type="vanished">也被称为V-TSC，当OP纵向控制启动时，该控制器会自动减速以适应道路弯曲。</translation>
+    </message>
+    <message>
+        <source>Enable Dynamic Experimental Control</source>
+        <translation type="vanished">启用动态实验控制</translation>
+    </message>
+    <message>
+        <source>Enable toggle to allow the model to determine when to use sunnypilot ACC or sunnypilot End to End Longitudinal.</source>
+        <translation type="vanished">启用开关以允许模型决定何时使用sunnypilot ACC或sunnypilot端到端纵向控制。</translation>
+    </message>
+    <message>
+        <source>Customize DEC</source>
+        <translation type="vanished">自定义 DEC</translation>
     </message>
     <message>
         <source>Intelligent Cruise Button Management (ICBM) (Alpha)</source>
-        <translation type="unfinished"></translation>
+        <translation>智能巡航按钮管理（ICBM）（Alpha版）</translation>
     </message>
     <message>
         <source>When enabled, sunnypilot will attempt to manage the built-in cruise control buttons by emulating button presses for limited longitudinal control.</source>
-        <translation type="unfinished"></translation>
+        <translation>启用后，sunnypilot将尝试通过模拟按钮按下动作来管理内置巡航控制按钮，以实现有限的纵向控制。</translation>
     </message>
     <message>
         <source>Smart Cruise Control - Vision</source>
-        <translation type="unfinished"></translation>
+        <translation>智能巡航控制 - 视觉</translation>
     </message>
     <message>
         <source>Use vision path predictions to estimate the appropriate speed to drive through turns ahead.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Smart Cruise Control - Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use map data to estimate the appropriate speed to drive through turns ahead.</source>
-        <translation type="unfinished"></translation>
+        <translation>利用视觉路径预测来预估通过前方弯道的合适速度。</translation>
     </message>
     <message>
         <source>Speed Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>速度限制</translation>
+    </message>
+    <message>
+        <source>Smart Cruise Control - Map</source>
+        <translation>智能巡航控制 - 地图</translation>
+    </message>
+    <message>
+        <source>Use map data to estimate the appropriate speed to drive through turns ahead.</source>
+        <translation>利用地图数据预测前方弯道应采取的合适速度。</translation>
     </message>
 </context>
 <context>
@@ -1397,19 +1527,23 @@ The default software delay value is 0.2</source>
     </message>
     <message>
         <source>Total Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>总延迟：</translation>
     </message>
     <message>
         <source>Use Lane Turn Desires</source>
-        <translation type="unfinished"></translation>
+        <translation>使用车道转向意愿</translation>
     </message>
     <message>
         <source>Adjust Lane Turn Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>调整车道转弯速度</translation>
     </message>
     <message>
         <source>Set the maximum speed for lane turn desires. Default is 19 %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>设置变道期望的最大速度。默认值为19 %1。</translation>
+    </message>
+    <message>
+        <source>If you’re driving at 20 mph (32 km/h) or below and have your blinker on, the car will plan a turn in that direction at the nearest drivable path. This prevents situations (like at red lights) where the car might plan the wrong turn direction.</source>
+        <translation type="vanished">如果你以20英里/小时（32公里/小时）或更低的速度行驶并开启了转向灯，车辆会在最近的可行驶路径上计划向该方向转弯。这可以避免车辆在红灯等情况下规划错误的转弯方向。</translation>
     </message>
 </context>
 <context>
@@ -1434,8 +1568,8 @@ The default software delay value is 0.2</source>
         <translation>输入密码</translation>
     </message>
     <message>
-        <source>for &quot;%1&quot;</source>
-        <translation>网络名称：&quot;%1&quot;</translation>
+        <source>for "%1"</source>
+        <translation>网络名称："%1"</translation>
     </message>
     <message>
         <source>Wrong password</source>
@@ -1488,11 +1622,11 @@ The default software delay value is 0.2</source>
         <translation>模糊</translation>
     </message>
     <message>
-        <source>Match: &quot;Exact&quot; is ideal, but &quot;Fuzzy&quot; is fine too.</source>
-        <translation>匹配：&quot;精确&quot;是理想的，但&quot;模糊&quot;也可以。</translation>
+        <source>Match: "Exact" is ideal, but "Fuzzy" is fine too.</source>
+        <translation>匹配："精确"是理想的，但"模糊"也可以。</translation>
     </message>
     <message>
-        <source>Formerly known as &lt;b&gt;&quot;NNFF&quot;&lt;/b&gt;, this replaces the lateral &lt;b&gt;&quot;torque&quot;&lt;/b&gt; controller, with one using a neural network trained on each car&apos;s (actually, each separate EPS firmware) driving data for increased controls accuracy.</source>
+        <source>Formerly known as &lt;b&gt;"NNFF"&lt;/b&gt;, this replaces the lateral &lt;b&gt;"torque"&lt;/b&gt; controller, with one using a neural network trained on each car's (actually, each separate EPS firmware) driving data for increased controls accuracy.</source>
         <translation>曾用名&lt;b&gt;“NNFF”&lt;/b&gt;，此功能用神经网络替换了传统的&lt;b&gt;“扭矩”&lt;/b&gt;控制器，该网络根据每辆车（实际上是每个独立的EPS固件）的驾驶数据进行训练，以提高控制精度。</translation>
     </message>
     <message>
@@ -1521,12 +1655,16 @@ The default software delay value is 0.2</source>
 %1</translation>
     </message>
     <message>
-        <source>Taking camera snapshots. System won&apos;t start until finished.</source>
+        <source>Taking camera snapshots. System won't start until finished.</source>
         <translation>正在使用相机拍摄中。在完成之前，系统将无法启动。</translation>
     </message>
     <message>
-        <source>An update to your device&apos;s operating system is downloading in the background. You will be prompted to update when it&apos;s ready to install.</source>
+        <source>An update to your device's operating system is downloading in the background. You will be prompted to update when it's ready to install.</source>
         <translation>一个针对您设备的操作系统更新正在后台下载中。当更新准备好安装时，您将收到提示进行更新。</translation>
+    </message>
+    <message>
+        <source>NVMe drive not mounted.</source>
+        <translation>NVMe固态硬盘未被挂载。</translation>
     </message>
     <message>
         <source>Device temperature too high. System cooling down before starting. Current internal component temperature: %1</source>
@@ -1545,15 +1683,15 @@ The default software delay value is 0.2</source>
         <translation>暂停更新</translation>
     </message>
     <message>
-        <source>openpilot detected excessive %1 actuation on your last drive. Please contact support at https://comma.ai/support and share your device&apos;s Dongle ID for troubleshooting.</source>
+        <source>openpilot detected excessive %1 actuation on your last drive. Please contact support at https://comma.ai/support and share your device's Dongle ID for troubleshooting.</source>
         <translation>openpilot检测到您上次驾驶中%1的激活过度。请通过https://comma.ai/support联系支持，并分享您的设备Dongle ID以便故障排除。</translation>
     </message>
     <message>
-        <source>Immediately connect to the internet to check for updates. If you do not connect to the internet, sunnypilot won&apos;t engage in %1</source>
+        <source>Immediately connect to the internet to check for updates. If you do not connect to the internet, sunnypilot won't engage in %1</source>
         <translation>立即连接到互联网检查更新。如果您不连接到互联网，sunnypilot 将无法在 %1 中启动。</translation>
     </message>
     <message>
-        <source>Connect to internet to check for updates. sunnypilot won&apos;t automatically start until it connects to internet to check for updates.</source>
+        <source>Connect to internet to check for updates. sunnypilot won't automatically start until it connects to internet to check for updates.</source>
         <translation>连接到互联网以检查更新。在连接到互联网并检查更新之前，sunnypilot 将不会自动启动。</translation>
     </message>
     <message>
@@ -1561,18 +1699,20 @@ The default software delay value is 0.2</source>
         <translation>sunnypilot无法识别您的汽车。您的车辆要么不受支持，要么其ECU无法识别。请提交拉取请求以将固件版本添加到适当的车辆中。需要帮助吗？请加入discord.comma.ai。</translation>
     </message>
     <message>
-        <source>sunnypilot detected a change in the device&apos;s mounting position. Ensure the device is fully seated in the mount and the mount is firmly secured to the windshield.</source>
+        <source>sunnypilot detected a change in the device's mounting position. Ensure the device is fully seated in the mount and the mount is firmly secured to the windshield.</source>
         <translation>sunnypilot检测到设备的安装位置发生了变化。请确保设备完全安装在支架上，并且支架牢固地固定在挡风玻璃上。</translation>
     </message>
     <message>
         <source>OpenStreetMap database is out of date. New maps must be downloaded if you wish to continue using OpenStreetMap data for Enhanced Speed Control and road name display.
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenStreetMap 数据库已过期。如果您希望继续使用 OpenStreetMap 数据进行增强速度控制和道路名称显示，必须下载新地图。
+
+%1</translation>
     </message>
     <message>
         <source>&lt;b&gt;Unsupported branch detected&lt;/b&gt; - The current version of &lt;b&gt;&lt;u&gt;%1&lt;/u&gt;&lt;/b&gt; branch is no longer supported on the comma three. Please go to &lt;b&gt;[Device &gt; Software]&lt;/b&gt; and install a supported branch with &lt;b&gt;&lt;u&gt;-tici&lt;/u&gt;&lt;/b&gt; in the branch name for the comma three.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;检测到不受支持的分支&lt;/b&gt; - 当前&lt;b&gt;&lt;u&gt;%1&lt;/u&gt;&lt;/b&gt;分支版本已不再支持comma three设备。请前往&lt;b&gt;[设备 &gt; 软件]&lt;/b&gt;页面，安装名称中包含&lt;b&gt;&lt;u&gt;-tici&lt;/u&gt;&lt;/b&gt;标识的受支持分支版本以适配comma three。</translation>
     </message>
 </context>
 <context>
@@ -1764,7 +1904,7 @@ Warning: You are on a metered connection!</source>
         <translation>在手机上访问 https://stable.konik.ai</translation>
     </message>
     <message>
-        <source>Click &quot;add new device&quot; and scan the QR code on the right</source>
+        <source>Click "add new device" and scan the QR code on the right</source>
         <translation>点击“添加新设备”，扫描右侧二维码</translation>
     </message>
     <message>
@@ -1945,60 +2085,65 @@ Warning: You are on a metered connection!</source>
     </message>
     <message>
         <source>sunnypilot</source>
-        <translation type="unfinished"></translation>
+        <translation>阳光驾驶</translation>
     </message>
     <message>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>无</translation>
     </message>
     <message>
         <source>Fixed</source>
-        <translation type="unfinished"></translation>
+        <translation>固定</translation>
     </message>
     <message>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation>比率</translation>
     </message>
     <message>
         <source>Car
 Only</source>
-        <translation type="unfinished"></translation>
+        <translation>仅限
+车辆</translation>
     </message>
     <message>
         <source>Map
 Only</source>
-        <translation type="unfinished"></translation>
+        <translation>仅限
+地图</translation>
     </message>
     <message>
         <source>Car
 First</source>
-        <translation type="unfinished"></translation>
+        <translation>车辆
+优先</translation>
     </message>
     <message>
         <source>Map
 First</source>
-        <translation type="unfinished"></translation>
+        <translation>地图
+优先</translation>
     </message>
     <message>
         <source>Combined
 Data</source>
-        <translation type="unfinished"></translation>
+        <translation>组合
+数据</translation>
     </message>
     <message>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <source>Information</source>
-        <translation type="unfinished"></translation>
+        <translation>信息</translation>
     </message>
     <message>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>警告</translation>
     </message>
     <message>
         <source>Assist</source>
-        <translation type="unfinished"></translation>
+        <translation>辅助</translation>
     </message>
 </context>
 <context>
@@ -2092,11 +2237,11 @@ Data</source>
     </message>
     <message>
         <source>Developer</source>
-        <translation type="unfinished">开发人员</translation>
+        <translation>开发人员</translation>
     </message>
     <message>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>显示</translation>
     </message>
 </context>
 <context>
@@ -2335,85 +2480,213 @@ Data</source>
     </message>
     <message>
         <source>Please enable always offroad mode or turn off vehicle to adjust these toggles</source>
-        <translation type="unfinished"></translation>
+        <translation>请启用始终离线模式或关闭车辆以调整这些开关</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControl</name>
+    <message>
+        <source>Customize SLC</source>
+        <translation type="vanished">自定义SLC</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlPolicy</name>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">返回</translation>
+    </message>
+    <message>
+        <source>Speed Limit Source</source>
+        <translation type="vanished">速度限制来源</translation>
+    </message>
+    <message>
+        <source>⦿ Car Only: Use Speed Limit data only from Car</source>
+        <translation type="vanished">⦿ 仅限汽车：仅使用来自汽车的速度限制数据</translation>
+    </message>
+    <message>
+        <source>⦿ Map Only: Use Speed Limit data only from OpenStreetMaps</source>
+        <translation type="vanished">⦿ 仅地图：仅使用来自OpenStreetMaps的速度限制数据</translation>
+    </message>
+    <message>
+        <source>⦿ Car First: Use Speed Limit data from Car if available, else use from OpenStreetMaps</source>
+        <translation type="vanished">⦿ 优先使用车辆数据：如果车辆的限速数据可用，则使用车辆的数据，否则使用OpenStreetMaps的数据。</translation>
+    </message>
+    <message>
+        <source>⦿ Map First: Use Speed Limit data from OpenStreetMaps if available, else use from Car</source>
+        <translation type="vanished">⦿ 优先使用地图：如果可用，使用OpenStreetMaps的速度限制数据，否则使用汽车的数据。</translation>
+    </message>
+    <message>
+        <source>⦿ Combined: Use combined Speed Limit data from Car &amp; OpenStreetMaps</source>
+        <translation type="vanished">⦿ 组合：使用来自汽车和OpenStreetMaps的组合速度限制数据</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlSubpanel</name>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">返回</translation>
+    </message>
+    <message>
+        <source>Customize Warning</source>
+        <translation type="vanished">自定义警告</translation>
+    </message>
+    <message>
+        <source>Customize Source</source>
+        <translation type="vanished">自定义来源</translation>
+    </message>
+    <message>
+        <source>Engage Mode</source>
+        <translation type="vanished">启动模式</translation>
+    </message>
+    <message>
+        <source>Speed Limit Offset</source>
+        <translation type="vanished">速度限制偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Auto: Automatic speed adjustment based on speed limit data</source>
+        <translation type="vanished">⦿ 自动：基于限速数据的自动速度调整</translation>
+    </message>
+    <message>
+        <source>⦿ User Confirm: Asks driver to confirm speed adjustment based on speed limit data</source>
+        <translation type="vanished">⦿ 用户确认：要求驾驶员根据速度限制数据确认速度调整</translation>
+    </message>
+    <message>
+        <source>⦿ None: No Offset</source>
+        <translation type="vanished">⦿ 无偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Fixed: Adds a fixed offset [Speed Limit + Offset]</source>
+        <translation type="vanished">⦿ 固定：增加固定偏移量 [速度限制 + 偏移]</translation>
+    </message>
+    <message>
+        <source>⦿ Percent: Adds a percent offset [Speed Limit + (Offset % Speed Limit)]</source>
+        <translation type="vanished">⦿ 百分比：添加百分比偏移量 [速度限制 + (偏移百分比 x 速度限制)]</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimitControlWarning</name>
+    <message>
+        <source>Back</source>
+        <translation type="vanished">返回</translation>
+    </message>
+    <message>
+        <source>Speed Limit Warning</source>
+        <translation type="vanished">速度限制警告</translation>
+    </message>
+    <message>
+        <source>Warning Offset</source>
+        <translation type="vanished">警告偏移</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation type="vanished">不适用</translation>
+    </message>
+    <message>
+        <source>⦿ Off: No Warning</source>
+        <translation type="vanished">⦿ 关闭：无警告</translation>
+    </message>
+    <message>
+        <source>⦿ Display: Speed Limit Sign will visually alert</source>
+        <translation type="vanished">⦿ 显示：速度限制标志将进行视觉提醒</translation>
+    </message>
+    <message>
+        <source>⦿ Chime: Speed Limit Sign will visually alert along with an audible chime</source>
+        <translation type="vanished">⦿ 提示音：速度限制标志将视觉上提示并伴有声音提示</translation>
+    </message>
+    <message>
+        <source>⦿ None: No Offset</source>
+        <translation type="vanished">⦿ 无偏移: 没有偏移</translation>
+    </message>
+    <message>
+        <source>⦿ Fixed: Adds a fixed offset [Speed Limit + Offset]</source>
+        <translation type="vanished">⦿ 固定：添加固定偏移量 [速度限制 + 偏移量]</translation>
+    </message>
+    <message>
+        <source>⦿ Percent: Adds a percent offset [Speed Limit + (Offset % Speed Limit)]</source>
+        <translation type="vanished">⦿ 百分比：添加百分比偏移量 [速度限制 + (偏移量 % 速度限制)]</translation>
     </message>
 </context>
 <context>
     <name>SpeedLimitPolicy</name>
     <message>
         <source>Back</source>
-        <translation type="unfinished">返回</translation>
+        <translation>返回</translation>
     </message>
     <message>
         <source>Speed Limit Source</source>
-        <translation type="unfinished"></translation>
+        <translation>速度限制来源</translation>
     </message>
     <message>
         <source>⦿ Car Only: Use Speed Limit data only from Car</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 仅限汽车：仅使用来自汽车的速度限制数据</translation>
     </message>
     <message>
         <source>⦿ Map Only: Use Speed Limit data only from OpenStreetMaps</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 仅地图：仅使用来自OpenStreetMaps的速度限制数据</translation>
     </message>
     <message>
         <source>⦿ Car First: Use Speed Limit data from Car if available, else use from OpenStreetMaps</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 优先使用车辆数据：如果车辆的限速数据可用，则使用车辆的数据，否则使用OpenStreetMaps的数据。</translation>
     </message>
     <message>
         <source>⦿ Map First: Use Speed Limit data from OpenStreetMaps if available, else use from Car</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 优先使用地图：如果可用，使用OpenStreetMaps的速度限制数据，否则使用汽车的数据。</translation>
     </message>
     <message>
         <source>⦿ Combined: Use combined Speed Limit data from Car &amp; OpenStreetMaps</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 组合：使用来自汽车和OpenStreetMaps的组合速度限制数据</translation>
     </message>
 </context>
 <context>
     <name>SpeedLimitSettings</name>
     <message>
         <source>Back</source>
-        <translation type="unfinished">返回</translation>
+        <translation>返回</translation>
     </message>
     <message>
-        <source>Speed Limit</source>
-        <translation type="unfinished"></translation>
+        <source>Speed Limit Mode</source>
+        <translation type="vanished">限速模式</translation>
     </message>
     <message>
         <source>Customize Source</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义来源</translation>
     </message>
     <message>
         <source>Speed Limit Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>速度限制偏移</translation>
     </message>
     <message>
         <source>⦿ None: No Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 无：无偏移</translation>
     </message>
     <message>
         <source>⦿ Fixed: Adds a fixed offset [Speed Limit + Offset]</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 固定：添加固定偏移 [速度限制 + 偏移量]</translation>
     </message>
     <message>
         <source>⦿ Percent: Adds a percent offset [Speed Limit + (Offset % Speed Limit)]</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 比率：添加百分比偏移 [速度限制 + (偏移量 % 速度限制)]</translation>
     </message>
     <message>
         <source>⦿ Off: Disables the Speed Limit functions.</source>
-        <translation type="unfinished"></translation>
+        <translation>⦿ 关闭：禁用速度限制功能。</translation>
     </message>
     <message>
-        <source>⦿ Information: Displays the current road&apos;s speed limit.</source>
-        <translation type="unfinished"></translation>
+        <source>⦿ Information: Displays the current road's speed limit.</source>
+        <translation>⦿ 信息：显示当前道路的速度限制。</translation>
     </message>
     <message>
-        <source>⦿ Warning: Provides a warning when exceeding the current road&apos;s speed limit.</source>
-        <translation type="unfinished"></translation>
+        <source>⦿ Warning: Provides a warning when exceeding the current road's speed limit.</source>
+        <translation>⦿ 警告：当超过当前道路的速度限制时提供警告。</translation>
     </message>
     <message>
-        <source>⦿ Assist: Adjusts the vehicle&apos;s cruise speed based on the current road&apos;s speed limit when operating the +/- buttons.</source>
-        <translation type="unfinished"></translation>
+        <source>Speed Limit</source>
+        <translation>速度限制</translation>
+    </message>
+    <message>
+        <source>⦿ Assist: Adjusts the vehicle's cruise speed based on the current road's speed limit when operating the +/- buttons.</source>
+        <translation>⦿ 辅助功能：在操作+/-按钮时，根据当前道路限速自动调整车辆巡航速度。</translation>
     </message>
 </context>
 <context>
@@ -2443,7 +2716,7 @@ Data</source>
         <translation>删除</translation>
     </message>
     <message>
-        <source>Username &apos;%1&apos; has no keys on GitHub</source>
+        <source>Username '%1' has no keys on GitHub</source>
         <translation>用户名“%1”在GitHub上没有密钥</translation>
     </message>
     <message>
@@ -2451,7 +2724,7 @@ Data</source>
         <translation>请求超时</translation>
     </message>
     <message>
-        <source>Username &apos;%1&apos; doesn&apos;t exist on GitHub</source>
+        <source>Username '%1' doesn't exist on GitHub</source>
         <translation>GitHub上不存在用户名“%1”</translation>
     </message>
 </context>
@@ -2505,11 +2778,11 @@ Data</source>
         <translation>未找到sunnylink Dongle ID。这可能是由于互联网连接弱或sunnylink注册问题。请重启后再试。</translation>
     </message>
     <message>
-        <source>🎉Welcome back! We&apos;re excited to see you&apos;ve enabled sunnylink again! 🚀</source>
+        <source>🎉Welcome back! We're excited to see you've enabled sunnylink again! 🚀</source>
         <translation>🎉欢迎回来！我们很高兴看到您再次启用了sunnylink！🚀</translation>
     </message>
     <message>
-        <source>👋Not going to lie, it&apos;s sad to see you disabled sunnylink 😢, but we&apos;ll be here when you&apos;re ready to come back 🎉.</source>
+        <source>👋Not going to lie, it's sad to see you disabled sunnylink 😢, but we'll be here when you're ready to come back 🎉.</source>
         <translation>👋不得不说，看到你禁用了sunnylink让人感到难过😢，但我们会在你准备好回来时一直等你🎉。</translation>
     </message>
     <message>
@@ -2589,7 +2862,7 @@ Data</source>
         <translation>启用 sunnylink 上传功能，允许 sunnypilot 将您的驾驶数据上传到 sunnypilot 服务器。（仅适用于最高级别用户，且不会为您带来任何好处。我们只是在测试数据量。）</translation>
     </message>
     <message>
-        <source>[Don&apos;t use] Enable sunnylink uploader</source>
+        <source>[Don't use] Enable sunnylink uploader</source>
         <translation>[不要使用] 启用 sunnylink 上传器</translation>
     </message>
     <message>
@@ -2601,7 +2874,7 @@ Data</source>
         <translation>为了安全备份、恢复和远程配置</translation>
     </message>
     <message>
-        <source>Sponsorship isn&apos;t required for basic backup/restore</source>
+        <source>Sponsorship isn't required for basic backup/restore</source>
         <translation>赞助不是基本备份/恢复的必需条件。</translation>
     </message>
     <message>
@@ -2620,7 +2893,7 @@ Data</source>
         <translation>按照提示完成配对过程</translation>
     </message>
     <message>
-        <source>Re-enter the &quot;sunnylink&quot; panel to verify sponsorship status</source>
+        <source>Re-enter the "sunnylink" panel to verify sponsorship status</source>
         <translation>重新进入“sunnylink”面板以验证赞助状态</translation>
     </message>
     <message>
@@ -2628,7 +2901,7 @@ Data</source>
         <translation>如果赞助状态未更新，请在Discord上联系管理员，网址为 https://discord.gg/sunnypilot</translation>
     </message>
     <message>
-        <source>Scan the QR code to visit sunnyhaibin&apos;s GitHub Sponsors page</source>
+        <source>Scan the QR code to visit sunnyhaibin's GitHub Sponsors page</source>
         <translation>扫描二维码访问sunnyhaibin的GitHub赞助页面</translation>
     </message>
     <message>
@@ -2696,8 +2969,8 @@ Restart comma to have openpilot use the key</source>
         <translation>欢迎使用sunnypilot</translation>
     </message>
     <message>
-        <source>You must accept the Terms and Conditions to use sunnypilot. Read the latest terms at &lt;span style=&apos;color: #465BEA;&apos;&gt;https://comma.ai/terms&lt;/span&gt; before continuing.</source>
-        <translation>您必须接受条款和条件才能使用sunnypilot。继续之前，请在&lt;span style=&apos;color: #465BEA;&apos;&gt;https://comma.ai/terms&lt;/span&gt;阅读最新的条款。</translation>
+        <source>You must accept the Terms and Conditions to use sunnypilot. Read the latest terms at &lt;span style='color: #465BEA;'&gt;https://comma.ai/terms&lt;/span&gt; before continuing.</source>
+        <translation>您必须接受条款和条件才能使用sunnypilot。继续之前，请在&lt;span style='color: #465BEA;'&gt;https://comma.ai/terms&lt;/span&gt;阅读最新的条款。</translation>
     </message>
 </context>
 <context>
@@ -2739,7 +3012,7 @@ Restart comma to have openpilot use the key</source>
         <translation>新驾驶视角</translation>
     </message>
     <message>
-        <source>Experimental mode is currently unavailable on this car since the car&apos;s stock ACC is used for longitudinal control.</source>
+        <source>Experimental mode is currently unavailable on this car since the car's stock ACC is used for longitudinal control.</source>
         <translation>由于此车辆使用自带的ACC纵向控制，当前无法使用试验模式。</translation>
     </message>
     <message>
@@ -2815,7 +3088,7 @@ Restart comma to have openpilot use the key</source>
         <translation>标准模式推荐使用。在激进模式下，sunnypilot将更紧密地跟随前车，并在油门和刹车上更具侵略性。在放松模式下，sunnypilot将与前车保持更远的距离。在支持的车辆上，您可以通过方向盘上的距离按钮来切换这些模式。</translation>
     </message>
     <message>
-        <source>sunnypilot defaults to driving in &lt;b&gt;chill mode&lt;/b&gt;. Experimental mode enables &lt;b&gt;alpha-level features&lt;/b&gt; that aren&apos;t ready for chill mode. Experimental features are listed below:</source>
+        <source>sunnypilot defaults to driving in &lt;b&gt;chill mode&lt;/b&gt;. Experimental mode enables &lt;b&gt;alpha-level features&lt;/b&gt; that aren't ready for chill mode. Experimental features are listed below:</source>
         <translation>sunnypilot 默认以&lt;b&gt;舒适模式&lt;/b&gt;行驶。实验模式开启&lt;b&gt;α级功能&lt;/b&gt;，这些功能尚未适用于舒适模式。以下列出了实验功能：</translation>
     </message>
     <message>
@@ -2828,61 +3101,119 @@ Restart comma to have openpilot use the key</source>
     </message>
     <message>
         <source>Enable the sunnypilot longitudinal control (alpha) toggle to allow Experimental mode.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TorqueLateralControlCustomParams</name>
-    <message>
-        <source>Manual Real-Time Tuning</source>
-        <translation type="unfinished"></translation>
+        <translation>启用 sunnypilot 纵向控制（alpha）开关以允许实验模式。</translation>
     </message>
     <message>
-        <source>Enforces the torque lateral controller to use the fixed values instead of the learned values from Self-Tune. Enabling this toggle overrides Self-Tune values.</source>
-        <translation type="unfinished"></translation>
+        <source>Enable drive mode btn link</source>
+        <translation type="vanished">启用驾驶模式按钮链接</translation>
     </message>
     <message>
-        <source>Lateral Acceleration Factor</source>
-        <translation type="unfinished"></translation>
+        <source>Links cars drive mode btn with accel personalities based on personality (i.e., relaxed, standard, sport)</source>
+        <translation type="vanished">将车辆驾驶模式按钮与基于个性的加速特性联系起来（例如，轻松、标准、运动）</translation>
     </message>
     <message>
-        <source>Friction</source>
-        <translation type="unfinished"></translation>
+        <source>Toyota: Auto Brake Hold FOR TSS2 HYBRID CARS</source>
+        <translation type="vanished">丰田：自动刹车保持，适用于TSS2混动车</translation>
     </message>
     <message>
-        <source>Real-time and Offline</source>
-        <translation type="unfinished"></translation>
+        <source>As you may auto brake hold currently supported by openpilot, this feature will allow sunnypilot to automatically hold the vehicle at a stop when the lead car is stopped. (TSS2 Hybird only)</source>
+        <translation type="vanished">如您所知，openpilot目前支持自动刹车保持功能，此功能将允许sunnypilot在前车停止时自动保持车辆停止状态。（仅限TSS2混合动力车型）</translation>
     </message>
     <message>
-        <source>Offline Only</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TorqueLateralControlSettings</name>
-    <message>
-        <source>Self-Tune</source>
-        <translation type="unfinished"></translation>
+        <source>Toyota: Prius TSS2 BSM and some tssp</source>
+        <translation type="vanished">丰田：普锐斯 TSS2 BSM 和部分 tssp</translation>
     </message>
     <message>
-        <source>Enables self-tune for Torque lateral control for platforms that do not use Torque lateral control by default.</source>
-        <translation type="unfinished"></translation>
+        <source>Add support for BSM.</source>
+        <translation type="vanished">添加BSM支持。</translation>
     </message>
     <message>
-        <source>Less Restrict Settings for Self-Tune (Beta)</source>
-        <translation type="unfinished"></translation>
+        <source>Toyota: custom tune</source>
+        <translation type="vanished">丰田：自定义调校</translation>
     </message>
     <message>
-        <source>Less strict settings when using Self-Tune. This allows torqued to be more forgiving when learning values.</source>
-        <translation type="unfinished"></translation>
+        <source>idk something gas and brake</source>
+        <translation type="vanished">不知道，油门和刹车有问题。</translation>
     </message>
     <message>
-        <source>Enable Custom Tuning</source>
-        <translation type="unfinished"></translation>
+        <source>Toyota: Stock Toyota Longitudinal</source>
+        <translation type="vanished">丰田：原装丰田纵向系统</translation>
     </message>
     <message>
-        <source>Enables custom tuning for Torque lateral control. Modifying Lateral Acceleration Factor and Friction below will override the offline values indicated in the YAML files within &quot;opendbc/car/torque_data&quot;. The values will also be used live when &quot;Manual Real-Time Tuning&quot; toggle is enabled.</source>
-        <translation type="unfinished"></translation>
+        <source>This feature will allow sunnypilot to use the stock Toyota longitudinal control instead of the sunnypilot longitudinal control. </source>
+        <translation type="vanished">此功能将允许sunnypilot使用原厂丰田纵向控制，而不是sunnypilot纵向控制。</translation>
+    </message>
+    <message>
+        <source>Sport</source>
+        <translation type="vanished">运动</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation type="vanished">正常</translation>
+    </message>
+    <message>
+        <source>Eco</source>
+        <translation type="vanished">节能</translation>
+    </message>
+    <message>
+        <source>Acceleration Personality</source>
+        <translation type="vanished">加速性格</translation>
+    </message>
+    <message>
+        <source>Normal is recommended. In sport mode, sunnypilot will provide aggressive acceleration for a dynamic driving experience. In eco mode, sunnypilot will apply smoother and more relaxed acceleration. On supported cars, you can cycle through these acceleration personality within Onroad Settings on the driving screen.</source>
+        <translation type="vanished">建议使用正常模式。在运动模式下，sunnypilot将提供更积极的加速，以带来动感的驾驶体验。在经济模式下，sunnypilot将应用更平稳、更放松的加速。在支持的汽车上，您可以在驾驶屏幕的Onroad设置中切换这些加速模式。</translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation>关闭</translation>
+    </message>
+    <message>
+        <source>Lite</source>
+        <translation>简易</translation>
+    </message>
+    <message>
+        <source>Full</source>
+        <translation>完整</translation>
+    </message>
+    <message>
+        <source>dashy</source>
+        <translation>局域传输</translation>
+    </message>
+    <message>
+        <source>dashy - dragonpilot's all-in-one system hub for you.
+
+Visit http://&lt;device_ip&gt;:5088 to access.
+
+Off - Turn off dashy completely.
+Lite: File Manager only.
+Full: File Manager + Live Stream.</source>
+        <translation>dashy - dragonpilot 的一站式系统枢纽。
+
+访问 http://&lt;device_ip&gt;:5088 进入。
+
+关闭 - 完全关闭 dashy。
+轻量版：仅文件管理器。
+完整版：文件管理器 + 实时流媒体。</translation>
+    </message>
+    <message>
+        <source>Strict</source>
+        <translation>严格</translation>
+    </message>
+    <message>
+        <source>Moderate</source>
+        <translation>适中</translation>
+    </message>
+    <message>
+        <source>Lenient</source>
+        <translation>宽松</translation>
+    </message>
+    <message>
+        <source>Set how sensitive the driver distraction detection should be. Strict: Very sensitive, warns on minor distractions. Moderate: Balanced between sensitivity and false positives. Lenient: Only alerts on clear distractions. Off: Disable Driver Distraction Detection and Control.</source>
+        <translation>设置驾驶员分心检测的灵敏度。严格模式：非常敏感，对轻微分心行为发出警告。适中模式：在敏感度和误报之间保持平衡。宽松模式：仅对明显的分心行为发出警告。关闭: 关闭驾驶员分心检测控制</translation>
+    </message>
+    <message>
+        <source>Distraction Detection Level</source>
+        <translation>分心检测等级</translation>
     </message>
 </context>
 <context>
@@ -2893,11 +3224,11 @@ Restart comma to have openpilot use the key</source>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>收藏夹</translation>
     </message>
 </context>
 <context>
@@ -2940,92 +3271,97 @@ Restart comma to have openpilot use the key</source>
     </message>
     <message>
         <source>Display useful metrics below the chevron that tracks the lead car (only applicable to cars with openpilot longitudinal control).</source>
-        <translation type="unfinished"></translation>
+        <translation>在跟踪前车的菱形符号下方显示有用的指标（仅适用于配备 openpilot 纵向控制的汽车）。</translation>
     </message>
     <message>
         <source>Enable Tesla Rainbow Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>启用特斯拉彩虹模式</translation>
+    </message>
+    <message>
+        <source>Enable the rainbow mode, which displays a rainbow effect on the screen.</source>
+        <translation type="vanished">启用彩虹模式，屏幕上将显示彩虹效果。</translation>
     </message>
     <message>
         <source>A beautiful rainbow effect on the path the model wants to take.</source>
-        <translation type="unfinished"></translation>
+        <translation>模型预测路径上呈现出一道美丽的彩虹效果。</translation>
     </message>
     <message>
         <source>It</source>
-        <translation type="unfinished"></translation>
+        <translation>它</translation>
     </message>
     <message>
         <source>does not</source>
-        <translation type="unfinished"></translation>
+        <translation>不适用</translation>
     </message>
     <message>
         <source>affect driving in any way.</source>
-        <translation type="unfinished"></translation>
+        <translation>不影响驾驶。</translation>
     </message>
     <message>
-        <source>Enable Standstill Timer</source>
-        <translation type="unfinished"></translation>
+        <source>Bottom
+ Only</source>
+        <translation type="vanished">底部
+仅限</translation>
     </message>
     <message>
-        <source>Show a timer on the HUD when the car is at a standstill.</source>
-        <translation type="unfinished"></translation>
+        <source>Bottom
+and Right</source>
+        <translation type="vanished">底部
+和右侧</translation>
     </message>
     <message>
-        <source>Display Road Name</source>
-        <translation type="unfinished"></translation>
+        <source>Developer UI</source>
+        <translation>开发者界面</translation>
     </message>
     <message>
-        <source>Displays the name of the road the car is traveling on. The OpenStreetMap database of the location must be downloaded from the OSM panel to fetch the road name.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Green Traffic Light Alert (Beta)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A chime and on-screen alert will play when the traffic light you are waiting for turns green and you have no vehicle in front of you.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Note: This chime is only designed as a notification. It is the driver&apos;s responsibility to observe their environment and make decisions accordingly.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lead Departure Alert (Beta)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A chime and on-screen alert will play when you are stopped, and the vehicle in front of you start moving.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speedometer: Always Display True Speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Always display the true vehicle current speed from wheel speed sensors.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speedometer: Hide from Onroad Screen</source>
-        <translation type="unfinished"></translation>
+        <source>Display real-time parameters and metrics from various sources.</source>
+        <translation>显示来自多个来源的实时参数和指标。</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <source>Right &amp;&amp;
 Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>右侧 &amp;&amp;
+底部</translation>
     </message>
     <message>
-        <source>Developer UI</source>
-        <translation type="unfinished"></translation>
+        <source>Enable Standstill Timer</source>
+        <translation>启用停车计时器</translation>
     </message>
     <message>
-        <source>Display real-time parameters and metrics from various sources.</source>
-        <translation type="unfinished"></translation>
+        <source>Show a timer on the HUD when the car is at a standstill.</source>
+        <translation>当车辆静止时，在HUD上显示计时器。</translation>
+    </message>
+    <message>
+        <source>Display Road Name</source>
+        <translation>显示道路名称</translation>
+    </message>
+    <message>
+        <source>Displays the name of the road the car is traveling on. The OpenStreetMap database of the location must be downloaded from the OSM panel to fetch the road name.</source>
+        <translation>显示车辆行驶的道路名称。需要从OSM面板下载该位置的OpenStreetMap数据库以获取道路名称。</translation>
+    </message>
+    <message>
+        <source>Green Traffic Light Alert (Beta)</source>
+        <translation>绿色交通信号灯提醒（测试版）</translation>
+    </message>
+    <message>
+        <source>A chime and on-screen alert will play when the traffic light you are waiting for turns green and you have no vehicle in front of you.</source>
+        <translation>当您等待的交通信号灯变为绿灯且前方无车辆时，系统会发出提示音并显示屏幕警示。</translation>
+    </message>
+    <message>
+        <source>Note: This chime is only designed as a notification. It is the driver's responsibility to observe their environment and make decisions accordingly.</source>
+        <translation>注意：此提示音仅作为通知用途。驾驶员有责任观察周围环境并据此做出决策。</translation>
+    </message>
+    <message>
+        <source>Lead Departure Alert (Beta)</source>
+        <translation>提前出发警报（测试版）</translation>
+    </message>
+    <message>
+        <source>A chime and on-screen alert will play when you are stopped, and the vehicle in front of you start moving.</source>
+        <translation>当您停车时，若前方车辆开始移动，系统将发出提示音并显示屏幕警报。</translation>
     </message>
 </context>
 <context>
@@ -3035,12 +3371,12 @@ Bottom</source>
         <translation>开启</translation>
     </message>
     <message>
-        <source>Maximize your training data uploads to improve openpilot&apos;s driving models.</source>
+        <source>Maximize your training data uploads to improve openpilot's driving models.</source>
         <translation>最大化您的训练数据上传，以改善 openpilot 的驾驶模型。</translation>
     </message>
     <message>
-        <source>&lt;span style=&apos;font-family: &quot;Noto Color Emoji&quot;;&apos;&gt;🔥&lt;/span&gt; Firehose Mode &lt;span style=&apos;font-family: Noto Color Emoji;&apos;&gt;🔥&lt;/span&gt;</source>
-        <translation>&lt;span style=&apos;font-family: &quot;Noto Color Emoji&quot;;&apos;&gt;🔥&lt;/span&gt; Firehose 模式 &lt;span style=&apos;font-family: Noto Color Emoji;&apos;&gt;🔥&lt;/span&gt;</translation>
+        <source>&lt;span style='font-family: "Noto Color Emoji";'&gt;🔥&lt;/span&gt; Firehose Mode &lt;span style='font-family: Noto Color Emoji;'&gt;🔥&lt;/span&gt;</source>
+        <translation>&lt;span style='font-family: "Noto Color Emoji";'&gt;🔥&lt;/span&gt; Firehose 模式 &lt;span style='font-family: Noto Color Emoji;'&gt;🔥&lt;/span&gt;</translation>
     </message>
 </context>
 <context>
@@ -3058,8 +3394,8 @@ Bottom</source>
         <translation>忽略</translation>
     </message>
     <message>
-        <source>Forget Wi-Fi Network &quot;%1&quot;?</source>
-        <translation>忽略WiFi网络 &quot;%1&quot;?</translation>
+        <source>Forget Wi-Fi Network "%1"?</source>
+        <translation>忽略WiFi网络 "%1"?</translation>
     </message>
     <message>
         <source>Forget</source>
