@@ -54,7 +54,7 @@ void ModelRendererSP::draw(QPainter &painter, const QRect &surface_rect) {
   if (rainbow) {
     drawRainbowPath(painter, surface_rect);
   } else {
-    ModelRenderer::drawPath(painter, model, surface_rect.height());
+    ModelRenderer::drawPath(painter, model, surface_rect.height(), surface_rect.width());
   }
 
   drawLeadStatus(painter, surface_rect.height(), surface_rect.width());
