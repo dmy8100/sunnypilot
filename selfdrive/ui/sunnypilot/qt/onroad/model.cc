@@ -278,7 +278,7 @@ void ModelRendererSP::drawRainbowPath(QPainter &painter, const QRect &surface_re
 
   // evenly spaced colors across the spectrum
   // The animation shifts the entire spectrum smoothly
-  float animation_speed = 40.0f; // speed vroom vroom
+  float animation_speed = 120.0f; // speed vroom vroom
   float hue_offset = fmod(time_offset * animation_speed, 360.0f);
 
   // 6-8 color stops for smooth transitions more color makes it laggy
